@@ -21,7 +21,21 @@
   "about": {
     "title": "About Me",
     "description": "With 3 years of experience in Japan and 8 years in North America, I bridge the gap between speed and quality. As a Full-stack Engineer and CEO of DVER Technology, I specialize in building scalable, high-performance web applications.",
-    "vision": "Providing next-generation digital solutions that combine practicality and beauty."
+    "vision": "Providing next-generation digital solutions that combine practicality and beauty.",
+    "stats": [
+      {
+        "value": "11+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "100+",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "20+",
+        "label": "Technologies"
+      }
+    ]
   },
   "works": {
     "title": "What I Do",
