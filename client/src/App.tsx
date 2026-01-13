@@ -1,11 +1,11 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Toaster } from "sonner";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
+import { system } from "./theme";
 
 
 function Router() {
@@ -20,24 +20,18 @@ function Router() {
 }
 
 // NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
+// - Chakra UI v3 handles theming through the system configuration in theme.ts
+// - Color mode (light/dark) is managed by Chakra's built-in color mode system
 
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ChakraProvider value={system}>
         <LanguageProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Router />
-          </TooltipProvider>
+          <Toaster />
+          <Router />
         </LanguageProvider>
-      </ThemeProvider>
+      </ChakraProvider>
     </ErrorBoundary>
   );
 }
