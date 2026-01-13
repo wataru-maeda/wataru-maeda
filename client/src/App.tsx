@@ -1,7 +1,8 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import { Toaster } from "sonner";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
+import { useTranslation } from "react-i18next";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
 import { system } from "./theme";
@@ -23,11 +24,19 @@ function Router() {
 // - Color mode (light/dark) is managed by Chakra's built-in color mode system
 
 function App() {
+  const { i18n } = useTranslation();
+  const isEnglish = i18n.language === 'en';
+
   return (
     <ErrorBoundary>
       <ChakraProvider value={system}>
-        <Toaster />
-        <Router />
+        <Box
+          fontFamily={isEnglish ? "'Manrope', 'Noto Sans JP', sans-serif" : "'Noto Sans JP', sans-serif"}
+          minH="100vh"
+        >
+          <Toaster />
+          <Router />
+        </Box>
       </ChakraProvider>
     </ErrorBoundary>
   );
