@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "フルスタックエンジニア / DVER Technology CEO",
+    "catchphrase": {
+      "prefix": "",
+      "highlight1": "北米のスピード感",
+      "middle": "と",
+      "highlight2": "日本の品質",
+      "suffix": "を融合させるフルスタックエンジニア。"
+    },
+    "buttons": {
+      "contact": "お問い合わせ",
+      "projects": "実績を見る"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "日本で3年、北米で8年の経験を持ち、スピードと品質のギャップを埋める開発を提供します。フルスタックエンジニア兼DVER TechnologyのCEOとして、スケーラブルで高性能なWebアプリケーション構築を専門としています。",
+    "vision": "機能的であるだけでなく、美しく直感的なデジタル体験を創造することをビジョンとしています。"
+  },
+  "works": {
+    "title": "What I Do",
+    "items": [
+      {
+        "title": "Web/モバイルアプリ開発",
+        "description": "React, React Native, Next.jsなどのモダンフレームワークを使用したクロスプラットフォーム開発。"
+      },
+      {
+        "title": "バックエンド/インフラ構築",
+        "description": "Node.js, Go, AWS, GCPを使用した堅牢なバックエンドシステムとクラウドインフラの設計・構築。"
+      },
+      {
+        "title": "生成AI導入支援",
+        "description": "最先端のAIソリューションを実装し、ワークフローの自動化とユーザー体験の向上を実現。"
+      },
+      {
+        "title": "MVPプロトタイプ開発",
+        "description": "アイデアを迅速にプロトタイプ化し、ユーザーフィードバックに基づいて高速に改善サイクルを回します。"
+      }
+    ]
+  },
+  "tech": {
+    "title": "Tech Stack"
+  },
+  "philosophy": {
+    "title": "Philosophy",
+    "items": [
+      {
+        "title": "ユーザー中心設計",
+        "description": "常にエンドユーザーのニーズと体験を最優先に考えます。"
+      },
+      {
+        "title": "クリーンコード",
+        "description": "保守性が高く、拡張性があり、自己説明的なコードを書くことを心がけています。"
+      },
+      {
+        "title": "継続的な学習",
+        "description": "最新の技術トレンドとベストプラクティスを常にキャッチアップしています。"
+      },
+      {
+        "title": "アジャイル開発",
+        "description": "変化を受け入れ、短いイテレーションで価値を提供し続けます。"
+      },
+      {
+        "title": "グローバルな視点",
+        "description": "多様な経験を活かし、複雑な問題に対して多角的なアプローチで解決策を見出します。"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

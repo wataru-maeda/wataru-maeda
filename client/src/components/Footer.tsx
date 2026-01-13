@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Box, Grid, GridItem, Heading, Flex, Text, Link as ChakraLink, VStack } from "@chakra-ui/react";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -30,7 +28,7 @@ export default function Footer() {
               letterSpacing="tighter"
               mb={8}
             >
-              {t.contact.title}
+              {t('contact.title')}
             </Heading>
             <ChakraLink href="mailto:contact@watarumaeda.com">
               <Button
@@ -40,7 +38,7 @@ export default function Footer() {
                 py={6}
                 borderRadius="full"
               >
-                <Mail style={{ marginRight: '0.5rem', height: '1.25rem', width: '1.25rem' }} /> {t.contact.email}
+                <Mail style={{ marginRight: '0.5rem', height: '1.25rem', width: '1.25rem' }} /> {t('contact.email')}
               </Button>
             </ChakraLink>
           </Box>
@@ -65,7 +63,7 @@ export default function Footer() {
                 }
               }}
             >
-              {t.contact.email}{' '}
+              {t('contact.email')}{' '}
               <ArrowUpRight
                 style={{
                   marginLeft: '0.5rem',
@@ -93,7 +91,7 @@ export default function Footer() {
                 }
               }}
             >
-              {t.contact.github}{' '}
+              {t('contact.github')}{' '}
               <Github
                 style={{
                   marginLeft: '0.5rem',
@@ -121,7 +119,7 @@ export default function Footer() {
                 }
               }}
             >
-              {t.contact.linkedin}{' '}
+              {t('contact.linkedin')}{' '}
               <Linkedin
                 style={{
                   marginLeft: '0.5rem',

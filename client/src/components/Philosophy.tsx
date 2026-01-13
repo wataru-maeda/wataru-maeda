@@ -1,10 +1,9 @@
 import { Box, Grid, GridItem, Heading, Text, VStack } from "@chakra-ui/react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
+import { useTranslation } from "react-i18next";
 
 export default function Philosophy() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { t } = useTranslation();
+  const items = t('philosophy.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
 
   return (
     <Box
@@ -24,11 +23,11 @@ export default function Philosophy() {
           color="bg"
           className="scroll-animate"
         >
-          {t.philosophy.title}
+          {t('philosophy.title')}
         </Heading>
 
         <VStack gap={0} align="stretch">
-          {t.philosophy.items.map((item, index) => (
+          {items.map((item, index) => (
             <Grid
               key={index}
               className="group scroll-animate"

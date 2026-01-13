@@ -3,7 +3,6 @@ import { Toaster } from "sonner";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
 import { system } from "./theme";
 
@@ -27,10 +26,8 @@ function App() {
   return (
     <ErrorBoundary>
       <ChakraProvider value={system}>
-        <LanguageProvider>
-          <Toaster />
-          <Router />
-        </LanguageProvider>
+        <Toaster />
+        <Router />
       </ChakraProvider>
     </ErrorBoundary>
   );

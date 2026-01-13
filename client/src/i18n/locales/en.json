@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "Full Stack Engineer / DVER Technology CEO",
+    "catchphrase": {
+      "prefix": "Fusing ",
+      "highlight1": "North American speed",
+      "middle": " with ",
+      "highlight2": "Japanese quality",
+      "suffix": " in software development."
+    },
+    "buttons": {
+      "contact": "Contact Me",
+      "projects": "View Work"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "With 3 years of experience in Japan and 8 years in North America, I bridge the gap between speed and quality. As a Full-stack Engineer and CEO of DVER Technology, I specialize in building scalable, high-performance web applications.",
+    "vision": "My vision is to create digital experiences that are not only functional but also aesthetically pleasing and intuitive."
+  },
+  "works": {
+    "title": "What I Do",
+    "items": [
+      {
+        "title": "Web/Mobile App Development",
+        "description": "Building cross-platform applications with modern frameworks like React, React Native, and Next.js."
+      },
+      {
+        "title": "Backend/Infra",
+        "description": "Designing robust backend systems and cloud infrastructure using Node.js, Go, AWS, and GCP."
+      },
+      {
+        "title": "Generative AI Integration",
+        "description": "Implementing cutting-edge AI solutions to automate workflows and enhance user experiences."
+      },
+      {
+        "title": "MVP Prototyping",
+        "description": "Rapidly prototyping ideas to validate concepts and iterate quickly based on user feedback."
+      }
+    ]
+  },
+  "tech": {
+    "title": "Tech Stack"
+  },
+  "philosophy": {
+    "title": "Philosophy",
+    "items": [
+      {
+        "title": "User-Centric Design",
+        "description": "Always prioritizing the end-user's needs and experience."
+      },
+      {
+        "title": "Clean Code",
+        "description": "Writing maintainable, scalable, and self-documenting code."
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "Staying up-to-date with the latest technologies and best practices."
+      },
+      {
+        "title": "Agile Methodology",
+        "description": "Embracing change and delivering value in short iterations."
+      },
+      {
+        "title": "Global Perspective",
+        "description": "Leveraging diverse experiences to solve complex problems."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

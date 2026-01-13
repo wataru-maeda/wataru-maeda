@@ -7,12 +7,10 @@ import {
   Image,
   Flex,
 } from "@chakra-ui/react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -41,7 +39,7 @@ export default function About() {
               mixBlendMode="difference"
               color="fg"
             >
-              {t.about.title}
+              {t('about.title')}
             </Heading>
             <Box
               position="relative"
@@ -87,7 +85,7 @@ export default function About() {
                 lineHeight="relaxed"
                 color="fg.muted"
               >
-                {t.about.description}
+                {t('about.description')}
               </Text>
             </Box>
 
@@ -105,7 +103,7 @@ export default function About() {
                 lineHeight="tight"
                 color="fg"
               >
-                "{t.about.vision}"
+                "{t('about.vision')}"
               </Text>
             </Box>
           </Flex>

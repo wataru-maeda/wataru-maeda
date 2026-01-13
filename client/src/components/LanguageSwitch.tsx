@@ -1,9 +1,15 @@
 import { Box, Flex, Button } from "@chakra-ui/react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 
 export function LanguageSwitch({ className }: { className?: string }) {
-  const { language, setLanguage } = useLanguage();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem("language", lng);
+  };
 
   return (
     <Flex
@@ -23,38 +29,38 @@ export function LanguageSwitch({ className }: { className?: string }) {
       boxShadow="sm"
     >
       <Button
-        onClick={() => setLanguage('en')}
+        onClick={() => changeLanguage('en')}
         px={3}
         py={1}
         borderRadius="full"
         fontSize="xs"
         fontWeight="bold"
         transition="all 0.3s"
-        bg={language === 'en' ? 'primary' : 'transparent'}
-        color={language === 'en' ? 'white' : 'fg.muted'}
-        boxShadow={language === 'en' ? 'sm' : 'none'}
+        bg={currentLanguage === 'en' ? 'primary' : 'transparent'}
+        color={currentLanguage === 'en' ? 'white' : 'fg.muted'}
+        boxShadow={currentLanguage === 'en' ? 'sm' : 'none'}
         css={{
           '&:hover': {
-            color: language === 'en' ? 'white' : 'var(--foreground)'
+            color: currentLanguage === 'en' ? 'white' : 'var(--foreground)'
           }
         }}
       >
         EN
       </Button>
       <Button
-        onClick={() => setLanguage('ja')}
+        onClick={() => changeLanguage('ja')}
         px={3}
         py={1}
         borderRadius="full"
         fontSize="xs"
         fontWeight="bold"
         transition="all 0.3s"
-        bg={language === 'ja' ? 'primary' : 'transparent'}
-        color={language === 'ja' ? 'white' : 'fg.muted'}
-        boxShadow={language === 'ja' ? 'sm' : 'none'}
+        bg={currentLanguage === 'ja' ? 'primary' : 'transparent'}
+        color={currentLanguage === 'ja' ? 'white' : 'fg.muted'}
+        boxShadow={currentLanguage === 'ja' ? 'sm' : 'none'}
         css={{
           '&:hover': {
-            color: language === 'ja' ? 'white' : 'var(--foreground)'
+            color: currentLanguage === 'ja' ? 'white' : 'var(--foreground)'
           }
         }}
       >

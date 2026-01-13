@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Box, Grid, GridItem, Heading, Text, Flex, VStack } from "@chakra-ui/react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
+import { useTranslation } from "react-i18next";
 
 const techCategories = [
   {
@@ -27,8 +26,7 @@ const techCategories = [
 ];
 
 export default function TechStack() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -45,7 +43,7 @@ export default function TechStack() {
           mb={16}
           className="scroll-animate"
         >
-          {t.tech.title}
+          {t('tech.title')}
         </Heading>
 
         <VStack gap={12} align="stretch">

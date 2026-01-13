@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Box, Flex, Text, Heading } from "@chakra-ui/react";
 import { ArrowRight } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -43,7 +41,7 @@ export default function Hero() {
             color="fg.muted"
             textTransform="uppercase"
           >
-            {t.hero.role}
+            {t('hero.role')}
           </Text>
         </Box>
 
@@ -72,11 +70,11 @@ export default function Hero() {
           className="animate-fade-in-up"
           style={{ animationDelay: '0.3s' }}
         >
-          {t.hero.catchphrase.prefix}
-          <Box as="span" color="fg" fontWeight="medium">{t.hero.catchphrase.highlight1}</Box>
-          {t.hero.catchphrase.middle}
-          <Box as="span" color="fg" fontWeight="medium">{t.hero.catchphrase.highlight2}</Box>
-          {t.hero.catchphrase.suffix}
+          {t('hero.catchphrase.prefix')}
+          <Box as="span" color="fg" fontWeight="medium">{t('hero.catchphrase.highlight1')}</Box>
+          {t('hero.catchphrase.middle')}
+          <Box as="span" color="fg" fontWeight="medium">{t('hero.catchphrase.highlight2')}</Box>
+          {t('hero.catchphrase.suffix')}
         </Text>
 
         <Flex
@@ -102,7 +100,7 @@ export default function Hero() {
                 }
               }}
             >
-              {t.hero.buttons.contact}
+              {t('hero.buttons.contact')}
             </Button>
           </a>
           <a href="#works">
@@ -125,7 +123,7 @@ export default function Hero() {
                 }
               }}
             >
-              {t.hero.buttons.projects} <ArrowRight style={{ marginLeft: '0.5rem', width: '1.25rem', height: '1.25rem' }} />
+              {t('hero.buttons.projects')} <ArrowRight style={{ marginLeft: '0.5rem', width: '1.25rem', height: '1.25rem' }} />
             </Button>
           </a>
         </Flex>

@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Box, Grid, Heading, Text, Image } from "@chakra-ui/react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
+import { useTranslation } from "react-i18next";
 
 const icons = [
   "/images/icon-web-mobile.png",
@@ -11,8 +10,8 @@ const icons = [
 ];
 
 export default function WhatIDo() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { t } = useTranslation();
+  const items = t('works.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
 
   return (
     <Box
@@ -30,14 +29,14 @@ export default function WhatIDo() {
           mb={16}
           className="scroll-animate"
         >
-          {t.works.title}
+          {t('works.title')}
         </Heading>
 
         <Grid
           templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
           gap={6}
         >
-          {t.works.items.map((item, index) => (
+          {items.map((item, index) => (
             <Box
               key={index}
               className="scroll-animate group"
