@@ -1,3 +1,4 @@
+import { Box, Grid, GridItem, Heading, Text, VStack } from "@chakra-ui/react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
 
@@ -6,35 +7,95 @@ export default function Philosophy() {
   const t = translations[language];
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24 bg-foreground text-background">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-24 text-background scroll-animate">{t.philosophy.title}</h2>
-        
-        <div className="grid grid-cols-1 gap-0">
+    <Box
+      as="section"
+      py={24}
+      px={{ base: 6, md: 12, lg: 24 }}
+      bg="fg"
+      color="bg"
+    >
+      <Box maxW="7xl" mx="auto">
+        <Heading
+          as="h2"
+          fontSize={{ base: "3xl", md: "4xl" }}
+          fontWeight="bold"
+          letterSpacing="tight"
+          mb={24}
+          color="bg"
+          className="scroll-animate"
+        >
+          {t.philosophy.title}
+        </Heading>
+
+        <VStack gap={0} align="stretch">
           {t.philosophy.items.map((item, index) => (
-            <div 
-              key={index} 
-              className="group grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-background/20 transition-colors duration-500 hover:bg-background/5 scroll-animate"
+            <Grid
+              key={index}
+              className="group scroll-animate"
+              templateColumns={{ base: "1fr", md: "repeat(12, 1fr)" }}
+              gap={8}
+              py={12}
+              borderTop="1px solid"
+              borderColor="rgba(255, 255, 255, 0.2)"
+              transition="background-color 0.5s"
+              css={{
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)'
+                }
+              }}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="md:col-span-2">
-                <span className="text-4xl md:text-5xl font-mono font-light text-background/40 group-hover:text-primary transition-colors duration-300">
+              <GridItem colSpan={{ base: 1, md: 2 }}>
+                <Text
+                  fontSize={{ base: "4xl", md: "5xl" }}
+                  fontFamily="mono"
+                  fontWeight="light"
+                  color="rgba(255, 255, 255, 0.4)"
+                  transition="color 0.3s"
+                  css={{
+                    '.group:hover &': {
+                      color: 'var(--primary)'
+                    }
+                  }}
+                >
                   {String(index + 1).padStart(2, '0')}
-                </span>
-              </div>
-              <div className="md:col-span-10">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-background group-hover:translate-x-2 transition-transform duration-300">
+                </Text>
+              </GridItem>
+              <GridItem colSpan={{ base: 1, md: 10 }}>
+                <Heading
+                  as="h3"
+                  fontSize={{ base: "2xl", md: "3xl" }}
+                  fontWeight="bold"
+                  mb={4}
+                  color="bg"
+                  transition="transform 0.3s"
+                  css={{
+                    '.group:hover &': {
+                      transform: 'translateX(0.5rem)'
+                    }
+                  }}
+                >
                   {item.title}
-                </h3>
-                <p className="text-lg text-background/70 max-w-2xl group-hover:text-background/90 transition-colors">
+                </Heading>
+                <Text
+                  fontSize="lg"
+                  color="rgba(255, 255, 255, 0.7)"
+                  maxW="2xl"
+                  transition="color 0.3s"
+                  css={{
+                    '.group:hover &': {
+                      color: 'rgba(255, 255, 255, 0.9)'
+                    }
+                  }}
+                >
                   {item.description}
-                </p>
-              </div>
-            </div>
+                </Text>
+              </GridItem>
+            </Grid>
           ))}
-          <div className="border-t border-background/20"></div>
-        </div>
-      </div>
-    </section>
+          <Box borderTop="1px solid" borderColor="rgba(255, 255, 255, 0.2)" />
+        </VStack>
+      </Box>
+    </Box>
   );
 }

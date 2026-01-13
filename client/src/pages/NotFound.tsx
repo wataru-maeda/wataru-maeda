@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { AlertCircle, Home } from "lucide-react";
 import { useLocation } from "wouter";
 
@@ -11,39 +12,59 @@ export default function NotFound() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+    <Flex
+      minH="100vh"
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+      className="bg-gradient-to-br from-slate-50 to-slate-100"
+    >
       <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
         <CardContent className="pt-8 pb-8 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-red-100 rounded-full animate-pulse" />
-              <AlertCircle className="relative h-16 w-16 text-red-500" />
-            </div>
-          </div>
+          <Flex justifyContent="center" mb={6}>
+            <Box position="relative">
+              <Box
+                position="absolute"
+                inset={0}
+                bg="red.100"
+                borderRadius="full"
+                className="animate-pulse"
+              />
+              <Box position="relative">
+                <AlertCircle style={{ height: '4rem', width: '4rem', color: '#ef4444' }} />
+              </Box>
+            </Box>
+          </Flex>
 
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
+          <Heading as="h1" fontSize="4xl" fontWeight="bold" color="slate.900" mb={2}>
+            404
+          </Heading>
 
-          <h2 className="text-xl font-semibold text-slate-700 mb-4">
+          <Heading as="h2" fontSize="xl" fontWeight="semibold" color="slate.700" mb={4}>
             Page Not Found
-          </h2>
+          </Heading>
 
-          <p className="text-slate-600 mb-8 leading-relaxed">
+          <Text color="slate.600" mb={8} lineHeight="relaxed">
             Sorry, the page you are looking for doesn't exist.
             <br />
             It may have been moved or deleted.
-          </p>
+          </Text>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <Flex
+            flexDirection={{ base: "column", sm: "row" }}
+            gap={3}
+            justifyContent="center"
+          >
             <Button
               onClick={handleGoHome}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              <Home className="w-4 h-4 mr-2" />
+              <Home style={{ width: '1rem', height: '1rem', marginRight: '0.5rem' }} />
               Go Home
             </Button>
-          </div>
+          </Flex>
         </CardContent>
       </Card>
-    </div>
+    </Flex>
   );
 }

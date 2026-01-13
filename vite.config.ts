@@ -1,9 +1,8 @@
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
-import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-const plugins = [react(), vitePluginManusRuntime()];
+const plugins = [react()];
 
 export default defineConfig({
   plugins,
@@ -24,15 +23,7 @@ export default defineConfig({
     port: 3000,
     strictPort: false, // Will find next available port if 3000 is busy
     host: true,
-    allowedHosts: [
-      ".manuspre.computer",
-      ".manus.computer",
-      ".manus-asia.computer",
-      ".manuscomputer.ai",
-      ".manusvm.computer",
-      "localhost",
-      "127.0.0.1",
-    ],
+    open: false, // Prevent browser from opening automatically
     fs: {
       strict: true,
       deny: ["**/.*"],

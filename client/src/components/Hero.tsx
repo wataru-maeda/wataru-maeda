@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Box, Flex, Text, Heading } from "@chakra-ui/react";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
@@ -8,47 +9,127 @@ export default function Hero() {
   const t = translations[language];
 
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-20 pb-10 relative overflow-hidden">
+    <Box
+      as="section"
+      minH="100vh"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      px={{ base: 6, md: 12, lg: 24 }}
+      pt={20}
+      pb={10}
+      position="relative"
+      overflow="hidden"
+    >
       {/* Grid Background (Subtle) */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]" 
+      <Box
+        position="absolute"
+        inset={0}
+        zIndex={0}
+        pointerEvents="none"
+        opacity={0.03}
         style={{
           backgroundImage: 'linear-gradient(#0a0a0a 1px, transparent 1px), linear-gradient(90deg, #0a0a0a 1px, transparent 1px)',
           backgroundSize: '40px 40px'
         }}
       />
 
-      <div className="z-10 max-w-7xl w-full mx-auto">
-        <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-          <span className="font-mono text-sm md:text-base tracking-wider text-muted-foreground uppercase">
+      <Box zIndex={10} maxW="7xl" w="full" mx="auto">
+        <Box mb={8} className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <Text
+            fontFamily="mono"
+            fontSize={{ base: "sm", md: "base" }}
+            letterSpacing="wider"
+            color="fg.muted"
+            textTransform="uppercase"
+          >
             {t.hero.role}
-          </span>
-        </div>
+          </Text>
+        </Box>
 
-        <h1 className="font-sans font-black text-[12vw] leading-[0.9] tracking-tighter text-foreground mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <Heading
+          as="h1"
+          fontFamily="sans"
+          fontWeight="black"
+          fontSize="12vw"
+          lineHeight={0.9}
+          letterSpacing="tighter"
+          color="fg"
+          mb={8}
+          className="animate-fade-in-up"
+          style={{ animationDelay: '0.2s' }}
+        >
           WATARU<br />MAEDA
-        </h1>
+        </Heading>
 
-        <p className="font-sans text-xl md:text-2xl lg:text-3xl font-normal max-w-2xl mb-12 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+        <Text
+          fontFamily="sans"
+          fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+          fontWeight="normal"
+          maxW="2xl"
+          mb={12}
+          color="fg.muted"
+          className="animate-fade-in-up"
+          style={{ animationDelay: '0.3s' }}
+        >
           {t.hero.catchphrase.prefix}
-          <span className="text-foreground font-medium">{t.hero.catchphrase.highlight1}</span>
+          <Box as="span" color="fg" fontWeight="medium">{t.hero.catchphrase.highlight1}</Box>
           {t.hero.catchphrase.middle}
-          <span className="text-foreground font-medium">{t.hero.catchphrase.highlight2}</span>
+          <Box as="span" color="fg" fontWeight="medium">{t.hero.catchphrase.highlight2}</Box>
           {t.hero.catchphrase.suffix}
-        </p>
+        </Text>
 
-        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <Flex
+          flexDirection={{ base: "column", sm: "row" }}
+          gap={4}
+          className="animate-fade-in-up"
+          style={{ animationDelay: '0.4s' }}
+        >
           <a href="mailto:contact@watarumaeda.com">
-            <Button size="lg" className="w-full sm:w-auto rounded-md px-8 py-6 text-lg font-medium bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button
+              size="lg"
+              w={{ base: "full", sm: "auto" }}
+              px={8}
+              py={6}
+              fontSize="lg"
+              fontWeight="medium"
+              colorPalette="blue"
+              css={{
+                boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)',
+                transition: 'all 0.3s',
+                '&:hover': {
+                  boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1)'
+                }
+              }}
+            >
               {t.hero.buttons.contact}
             </Button>
           </a>
           <a href="#works">
-            <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-md px-8 py-6 text-lg font-medium border-2 hover:bg-accent transition-all duration-300 group">
-              {t.hero.buttons.projects} <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button
+              variant="outline"
+              size="lg"
+              w={{ base: "full", sm: "auto" }}
+              px={8}
+              py={6}
+              fontSize="lg"
+              fontWeight="medium"
+              borderWidth={2}
+              css={{
+                transition: 'all 0.3s',
+                '& svg': {
+                  transition: 'transform 0.3s'
+                },
+                '&:hover svg': {
+                  transform: 'translateX(0.25rem)'
+                }
+              }}
+            >
+              {t.hero.buttons.projects} <ArrowRight style={{ marginLeft: '0.5rem', width: '1.25rem', height: '1.25rem' }} />
             </Button>
           </a>
-        </div>
-      </div>
-    </section>
+        </Flex>
+      </Box>
+    </Box>
   );
 }

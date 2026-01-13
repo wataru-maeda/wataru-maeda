@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -10,16 +11,29 @@ import { LanguageSwitch } from "@/components/LanguageSwitch";
 export default function Home() {
   useScrollAnimation();
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground font-sans selection:bg-primary selection:text-white">
+    <Box
+      minH="100vh"
+      display="flex"
+      flexDirection="column"
+      bg="bg"
+      color="fg"
+      fontFamily="sans"
+      css={{
+        '::selection': {
+          backgroundColor: 'var(--primary)',
+          color: 'white'
+        }
+      }}
+    >
       <LanguageSwitch />
-      <main className="flex-grow">
+      <Box as="main" flexGrow={1}>
         <Hero />
         <About />
         <WhatIDo />
         <TechStack />
         <Philosophy />
-      </main>
+      </Box>
       <Footer />
-    </div>
+    </Box>
   );
 }

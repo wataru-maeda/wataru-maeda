@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { Box, Flex, Heading, Button, Code } from "@chakra-ui/react";
 import { AlertTriangle, RotateCcw } from "lucide-react";
 import { Component, ReactNode } from "react";
 
@@ -24,34 +24,68 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="flex items-center justify-center min-h-screen p-8 bg-background">
-          <div className="flex flex-col items-center w-full max-w-2xl p-8">
-            <AlertTriangle
-              size={48}
-              className="text-destructive mb-6 flex-shrink-0"
-            />
+        <Flex
+          alignItems="center"
+          justifyContent="center"
+          minH="100vh"
+          p={8}
+          bg="bg"
+        >
+          <Flex
+            flexDirection="column"
+            alignItems="center"
+            w="full"
+            maxW="2xl"
+            p={8}
+          >
+            <Box mb={6} flexShrink={0}>
+              <AlertTriangle size={48} color="var(--destructive)" />
+            </Box>
 
-            <h2 className="text-xl mb-4">An unexpected error occurred.</h2>
+            <Heading as="h2" fontSize="xl" mb={4}>
+              An unexpected error occurred.
+            </Heading>
 
-            <div className="p-4 w-full rounded bg-muted overflow-auto mb-6">
-              <pre className="text-sm text-muted-foreground whitespace-break-spaces">
+            <Box
+              p={4}
+              w="full"
+              borderRadius="md"
+              bg="bg.muted"
+              overflowX="auto"
+              mb={6}
+            >
+              <Code
+                as="pre"
+                fontSize="sm"
+                color="fg.muted"
+                whiteSpace="break-spaces"
+                bg="transparent"
+              >
                 {this.state.error?.stack}
-              </pre>
-            </div>
+              </Code>
+            </Box>
 
-            <button
+            <Button
               onClick={() => window.location.reload()}
-              className={cn(
-                "flex items-center gap-2 px-4 py-2 rounded-lg",
-                "bg-primary text-primary-foreground",
-                "hover:opacity-90 cursor-pointer"
-              )}
+              display="flex"
+              alignItems="center"
+              gap={2}
+              px={4}
+              py={2}
+              borderRadius="lg"
+              bg="primary"
+              color="white"
+              css={{
+                '&:hover': {
+                  opacity: 0.9
+                }
+              }}
             >
               <RotateCcw size={16} />
               Reload Page
-            </button>
-          </div>
-        </div>
+            </Button>
+          </Flex>
+        </Flex>
       );
     }
 

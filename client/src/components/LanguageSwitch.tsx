@@ -1,3 +1,4 @@
+import { Box, Flex, Button } from "@chakra-ui/react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 
@@ -5,29 +6,60 @@ export function LanguageSwitch({ className }: { className?: string }) {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className={cn("fixed top-6 right-6 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm p-1 rounded-full border border-border shadow-sm", className)}>
-      <button
+    <Flex
+      className={cn(className)}
+      position="fixed"
+      top={6}
+      right={6}
+      zIndex={50}
+      alignItems="center"
+      gap={2}
+      bg="rgba(255, 255, 255, 0.8)"
+      backdropFilter="blur(8px)"
+      p={1}
+      borderRadius="full"
+      border="1px solid"
+      borderColor="border"
+      boxShadow="sm"
+    >
+      <Button
         onClick={() => setLanguage('en')}
-        className={cn(
-          "px-3 py-1 rounded-full text-xs font-bold transition-all duration-300",
-          language === 'en' 
-            ? "bg-primary text-primary-foreground shadow-sm" 
-            : "text-muted-foreground hover:text-foreground"
-        )}
+        px={3}
+        py={1}
+        borderRadius="full"
+        fontSize="xs"
+        fontWeight="bold"
+        transition="all 0.3s"
+        bg={language === 'en' ? 'primary' : 'transparent'}
+        color={language === 'en' ? 'white' : 'fg.muted'}
+        boxShadow={language === 'en' ? 'sm' : 'none'}
+        css={{
+          '&:hover': {
+            color: language === 'en' ? 'white' : 'var(--foreground)'
+          }
+        }}
       >
         EN
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => setLanguage('ja')}
-        className={cn(
-          "px-3 py-1 rounded-full text-xs font-bold transition-all duration-300",
-          language === 'ja' 
-            ? "bg-primary text-primary-foreground shadow-sm" 
-            : "text-muted-foreground hover:text-foreground"
-        )}
+        px={3}
+        py={1}
+        borderRadius="full"
+        fontSize="xs"
+        fontWeight="bold"
+        transition="all 0.3s"
+        bg={language === 'ja' ? 'primary' : 'transparent'}
+        color={language === 'ja' ? 'white' : 'fg.muted'}
+        boxShadow={language === 'ja' ? 'sm' : 'none'}
+        css={{
+          '&:hover': {
+            color: language === 'ja' ? 'white' : 'var(--foreground)'
+          }
+        }}
       >
         JP
-      </button>
-    </div>
+      </Button>
+    </Flex>
   );
 }

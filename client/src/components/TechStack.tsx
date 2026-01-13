@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Box, Grid, GridItem, Heading, Text, Flex, VStack } from "@chakra-ui/react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
 
@@ -30,33 +31,71 @@ export default function TechStack() {
   const t = translations[language];
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-16 scroll-animate">{t.tech.title}</h2>
-        
-        <div className="space-y-12">
+    <Box
+      as="section"
+      py={24}
+      px={{ base: 6, md: 12, lg: 24 }}
+    >
+      <Box maxW="7xl" mx="auto">
+        <Heading
+          as="h2"
+          fontSize={{ base: "3xl", md: "4xl" }}
+          fontWeight="bold"
+          letterSpacing="tight"
+          mb={16}
+          className="scroll-animate"
+        >
+          {t.tech.title}
+        </Heading>
+
+        <VStack gap={12} align="stretch">
           {techCategories.map((cat, index) => (
-            <div key={index} className="grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline border-b border-border/40 pb-8 last:border-0 scroll-animate" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="md:col-span-3">
-                <h3 className="text-lg font-mono font-medium text-muted-foreground uppercase tracking-wider">
+            <Grid
+              key={index}
+              templateColumns={{ base: "1fr", md: "repeat(12, 1fr)" }}
+              gap={8}
+              alignItems="baseline"
+              borderBottom="1px solid"
+              borderColor="rgba(226, 232, 240, 0.4)"
+              pb={8}
+              css={{
+                '&:last-child': {
+                  borderBottom: 'none'
+                }
+              }}
+              className="scroll-animate"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <GridItem colSpan={{ base: 1, md: 3 }}>
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  fontFamily="mono"
+                  fontWeight="medium"
+                  color="fg.muted"
+                  textTransform="uppercase"
+                  letterSpacing="wider"
+                >
                   {cat.category}
-                </h3>
-              </div>
-              <div className="md:col-span-9 flex flex-wrap gap-3">
-                {cat.items.map((item, i) => (
-                  <Badge 
-                    key={i} 
-                    variant="secondary" 
-                    className="px-4 py-2 text-base font-mono font-normal bg-secondary hover:bg-secondary/80 text-foreground rounded-md"
-                  >
-                    {item}
-                  </Badge>
-                ))}
-              </div>
-            </div>
+                </Heading>
+              </GridItem>
+              <GridItem colSpan={{ base: 1, md: 9 }}>
+                <Flex flexWrap="wrap" gap={3}>
+                  {cat.items.map((item, i) => (
+                    <Badge
+                      key={i}
+                      variant="secondary"
+                      className="px-4 py-2 text-base font-mono font-normal bg-secondary hover:bg-secondary/80 text-foreground rounded-md"
+                    >
+                      {item}
+                    </Badge>
+                  ))}
+                </Flex>
+              </GridItem>
+            </Grid>
           ))}
-        </div>
-      </div>
-    </section>
+        </VStack>
+      </Box>
+    </Box>
   );
 }
