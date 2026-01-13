@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/elements/card";
 import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import { TbDeviceMobile, TbServer, TbSparkles, TbRocket } from "react-icons/tb";
 import { useTranslation } from "react-i18next";

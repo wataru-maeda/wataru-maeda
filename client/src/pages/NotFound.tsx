@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/elements/button";
+import { Card, CardContent } from "@/components/elements/card";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { TbAlertCircle, TbHome } from "react-icons/tb";
 import { useLocation } from "wouter";

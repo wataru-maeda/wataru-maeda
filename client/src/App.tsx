@@ -4,7 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import { useTranslation } from "react-i18next";
 import React from "react";
-import ErrorBoundary from "./components/ErrorBoundary";
+import ErrorBoundary from "./components/layouts/ErrorBoundary";
 import Home from "./pages/Home";
 import { system } from "./theme";
 

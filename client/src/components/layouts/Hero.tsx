@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/elements/button";
 import { Box, Flex, Text, Heading } from "@chakra-ui/react";
 import { TbArrowRight } from "react-icons/tb";
 import { useTranslation } from "react-i18next";

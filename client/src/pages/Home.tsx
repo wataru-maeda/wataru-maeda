@@ -1,12 +1,12 @@
 import { Box } from "@chakra-ui/react";
-import About from "@/components/About";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Philosophy from "@/components/Philosophy";
-import TechStack from "@/components/TechStack";
-import WhatIDo from "@/components/WhatIDo";
+import About from "@/components/layouts/About";
+import Footer from "@/components/layouts/Footer";
+import Hero from "@/components/layouts/Hero";
+import Philosophy from "@/components/layouts/Philosophy";
+import TechStack from "@/components/layouts/TechStack";
+import WhatIDo from "@/components/layouts/WhatIDo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { LanguageSwitch } from "@/components/LanguageSwitch";
+import { LanguageSwitch } from "@/components/layouts/LanguageSwitch";
 
 export default function Home() {
   useScrollAnimation();

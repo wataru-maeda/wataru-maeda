@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/elements/badge";
 import { Box, Grid, GridItem, Heading, Text, Flex, VStack } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/elements/button";
 import { Box, Grid, GridItem, Heading, Flex, Text, Link as ChakraLink, VStack } from "@chakra-ui/react";
 import { TbArrowUpRight, TbBrandGithub, TbBrandLinkedin, TbMail } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
@@ -138,14 +138,12 @@ export default function Footer() {
           pt={8}
           borderTop="1px solid"
           borderColor="border"
-          flexDirection={{ base: "column", md: "row" }}
-          justifyContent="space-between"
+          justifyContent="center"
           alignItems="center"
           fontSize="sm"
           color="fg.muted"
         >
           <Text>© {new Date().getFullYear()} Wataru Maeda. All rights reserved.</Text>
-          <Text mt={{ base: 2, md: 0 }} fontFamily="mono">Designed & Built with precision.</Text>
         </Flex>
       </Box>
     </Box>
