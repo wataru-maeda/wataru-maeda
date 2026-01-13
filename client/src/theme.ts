@@ -4,8 +4,8 @@ const config = defineConfig({
   theme: {
     tokens: {
       fonts: {
-        heading: { value: "Inter, sans-serif" },
-        body: { value: "Inter, sans-serif" },
+        heading: { value: "'Noto Sans JP', sans-serif" },
+        body: { value: "'Noto Sans JP', sans-serif" },
         mono: { value: "JetBrains Mono, monospace" },
       },
       radii: {
