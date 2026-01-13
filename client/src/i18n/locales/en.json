@@ -20,19 +20,19 @@
   },
   "about": {
     "title": "About Me",
-    "description": "With experience in Japan and North America, I pursue development that ensures quality while seeking speed. As a Full-stack Engineer and CEO of DVER Technology, I specialize in building scalable, high-performance applications.",
+    "description": "Leveraging experience in Japan and North America, I deliver development that balances quality and speed. Specializing in building scalable, high-performance applications.",
     "vision": "Providing next-generation digital solutions that combine practicality and beauty.",
     "stats": [
       {
-        "value": "11+",
+        "value": "13+",
         "label": "Years Experience"
       },
       {
-        "value": "100+",
+        "value": "20+",
         "label": "Projects Delivered"
       },
       {
-        "value": "20+",
+        "value": "100+",
         "label": "Technologies"
       }
     ]
