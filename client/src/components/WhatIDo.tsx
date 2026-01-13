@@ -1,13 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Box, Grid, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Grid, Heading, Text } from "@chakra-ui/react";
+import { MdPhoneIphone } from "react-icons/md";
+import { FaServer } from "react-icons/fa";
+import { HiSparkles } from "react-icons/hi2";
+import { IoRocket } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
-const icons = [
-  "/images/icon-web-mobile.png",
-  "/images/icon-backend.png",
-  "/images/icon-ai.png",
-  "/images/icon-prototype.png"
-];
+const icons = [MdPhoneIphone, FaServer, HiSparkles, IoRocket];
 
 export default function WhatIDo() {
   const { t } = useTranslation();
@@ -36,54 +35,54 @@ export default function WhatIDo() {
           templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
           gap={6}
         >
-          {items.map((item, index) => (
-            <Box
-              key={index}
-              className="scroll-animate group"
-              style={{ animationDelay: `${index * 0.1}s` }}
-              h="full"
-            >
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-background h-full">
-                <CardHeader className="pb-4">
-                  <Box
-                    w={16}
-                    h={16}
-                    mb={6}
-                    p={3}
-                    bg="bg.subtle"
-                    borderRadius="xl"
-                    transition="background-color 0.3s"
-                    css={{
-                      '.group:hover &': {
-                        backgroundColor: 'rgba(37, 99, 235, 0.1)'
-                      }
-                    }}
-                  >
-                    <Image
-                      src={icons[index]}
-                      alt={item.title}
-                      w="full"
-                      h="full"
-                      objectFit="contain"
-                      opacity={0.8}
-                      transition="opacity 0.3s"
+          {items.map((item, index) => {
+            const Icon = icons[index];
+            return (
+              <Box
+                key={index}
+                className="scroll-animate group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                h="full"
+              >
+                <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-background h-full">
+                  <CardHeader className="pb-4">
+                    <Box
+                      w={16}
+                      h={16}
+                      mb={6}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      bg="bg.subtle"
+                      borderRadius="xl"
+                      transition="all 0.3s"
                       css={{
                         '.group:hover &': {
-                          opacity: 1
+                          backgroundColor: 'rgba(37, 99, 235, 0.1)'
                         }
                       }}
-                    />
-                  </Box>
-                  <CardTitle className="text-xl font-bold">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <Text color="fg.muted" lineHeight="relaxed">
-                    {item.description}
-                  </Text>
-                </CardContent>
-              </Card>
-            </Box>
-          ))}
+                    >
+                      <Icon
+                        size={40}
+                        style={{
+                          opacity: 0.8,
+                          transition: 'all 0.3s',
+                          color: '#3b82f6'
+                        }}
+                        className="group-hover:opacity-100"
+                      />
+                    </Box>
+                    <CardTitle className="text-xl font-bold">{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <Text color="fg.muted" lineHeight="relaxed">
+                      {item.description}
+                    </Text>
+                  </CardContent>
+                </Card>
+              </Box>
+            );
+          })}
         </Grid>
       </Box>
     </Box>

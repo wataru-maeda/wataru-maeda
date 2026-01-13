@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Button, Code } from "@chakra-ui/react";
-import { AlertTriangle, RotateCcw } from "lucide-react";
+import { MdWarning } from "react-icons/md";
+import { IoReload } from "react-icons/io5";
 import { Component, ReactNode } from "react";
 
 interface Props {
@@ -39,7 +40,7 @@ class ErrorBoundary extends Component<Props, State> {
             p={8}
           >
             <Box mb={6} flexShrink={0}>
-              <AlertTriangle size={48} color="var(--destructive)" />
+              <MdWarning size={48} color="var(--destructive)" />
             </Box>
 
             <Heading as="h2" fontSize="xl" mb={4}>
@@ -81,7 +82,7 @@ class ErrorBoundary extends Component<Props, State> {
                 }
               }}
             >
-              <RotateCcw size={16} />
+              <IoReload size={16} />
               Reload Page
             </Button>
           </Flex>

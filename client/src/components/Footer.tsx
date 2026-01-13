@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Box, Grid, GridItem, Heading, Flex, Text, Link as ChakraLink, VStack } from "@chakra-ui/react";
-import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import { HiArrowUpRight } from "react-icons/hi2";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
@@ -38,7 +40,7 @@ export default function Footer() {
                 py={6}
                 borderRadius="full"
               >
-                <Mail style={{ marginRight: '0.5rem', height: '1.25rem', width: '1.25rem' }} /> {t('contact.email')}
+                <MdEmail style={{ marginRight: '0.5rem', height: '1.25rem', width: '1.25rem' }} /> {t('contact.email')}
               </Button>
             </ChakraLink>
           </Box>
@@ -64,7 +66,7 @@ export default function Footer() {
               }}
             >
               {t('contact.email')}{' '}
-              <ArrowUpRight
+              <HiArrowUpRight
                 style={{
                   marginLeft: '0.5rem',
                   height: '1.5rem',
@@ -92,7 +94,7 @@ export default function Footer() {
               }}
             >
               {t('contact.github')}{' '}
-              <Github
+              <FaGithub
                 style={{
                   marginLeft: '0.5rem',
                   height: '1.5rem',
@@ -120,7 +122,7 @@ export default function Footer() {
               }}
             >
               {t('contact.linkedin')}{' '}
-              <Linkedin
+              <FaLinkedin
                 style={{
                   marginLeft: '0.5rem',
                   height: '1.5rem',
