@@ -1,6 +1,5 @@
 import { Button } from "@/components/elements/button";
-import { Box, Flex, Text, Heading } from "@chakra-ui/react";
-import { TbArrowRight } from "react-icons/tb";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {
@@ -58,7 +57,7 @@ export default function Hero() {
           lineHeight={0.9}
           letterSpacing="tighter"
           color="fg"
-          mb={8}
+          mb={12}
           className="animate-fade-in-up"
           style={{ animationDelay: "0.2s" }}
         >
@@ -67,32 +66,9 @@ export default function Hero() {
           MAEDA
         </Heading>
 
-        <Text
-          fontFamily="sans"
-          fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
-          fontWeight="normal"
-          maxW="2xl"
-          mb={12}
-          color="fg.muted"
+        <Box
           className="animate-fade-in-up"
           style={{ animationDelay: "0.3s" }}
-        >
-          {t("hero.catchphrase.prefix")}
-          <Box as="span" color="fg" fontWeight="medium">
-            {t("hero.catchphrase.highlight1")}
-          </Box>
-          {t("hero.catchphrase.middle")}
-          <Box as="span" color="fg" fontWeight="medium">
-            {t("hero.catchphrase.highlight2")}
-          </Box>
-          {t("hero.catchphrase.suffix")}
-        </Text>
-
-        <Flex
-          flexDirection={{ base: "column", sm: "row" }}
-          gap={4}
-          className="animate-fade-in-up"
-          style={{ animationDelay: "0.4s" }}
         >
           <a href="mailto:contact@watarumaeda.com">
             <Button
@@ -114,37 +90,7 @@ export default function Hero() {
               {t("hero.buttons.contact")}
             </Button>
           </a>
-          <a href="#works">
-            <Button
-              variant="outline"
-              size="lg"
-              w={{ base: "full", sm: "auto" }}
-              px={8}
-              py={6}
-              fontSize="lg"
-              fontWeight="medium"
-              borderWidth={2}
-              css={{
-                transition: "all 0.3s",
-                "& svg": {
-                  transition: "transform 0.3s",
-                },
-                "&:hover svg": {
-                  transform: "translateX(0.25rem)",
-                },
-              }}
-            >
-              {t("hero.buttons.projects")}{" "}
-              <TbArrowRight
-                style={{
-                  marginLeft: "0.5rem",
-                  width: "1.25rem",
-                  height: "1.25rem",
-                }}
-              />
-            </Button>
-          </a>
-        </Flex>
+        </Box>
       </Box>
     </Box>
   );
