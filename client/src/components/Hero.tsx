@@ -27,13 +27,18 @@ export default function Hero() {
         pointerEvents="none"
         opacity={0.03}
         style={{
-          backgroundImage: 'linear-gradient(#0a0a0a 1px, transparent 1px), linear-gradient(90deg, #0a0a0a 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
+          backgroundImage:
+            "linear-gradient(#0a0a0a 1px, transparent 1px), linear-gradient(90deg, #0a0a0a 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
         }}
       />
 
       <Box zIndex={10} maxW="7xl" w="full" mx="auto">
-        <Box mb={8} className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <Box
+          mb={8}
+          className="animate-fade-in-up"
+          style={{ animationDelay: "0.1s" }}
+        >
           <Text
             fontFamily="mono"
             fontSize={{ base: "sm", md: "base" }}
@@ -41,7 +46,7 @@ export default function Hero() {
             color="fg.muted"
             textTransform="uppercase"
           >
-            {t('hero.role')}
+            {t("hero.role")}
           </Text>
         </Box>
 
@@ -55,9 +60,11 @@ export default function Hero() {
           color="fg"
           mb={8}
           className="animate-fade-in-up"
-          style={{ animationDelay: '0.2s' }}
+          style={{ animationDelay: "0.2s" }}
         >
-          WATARU<br />MAEDA
+          WATARU
+          <br />
+          MAEDA
         </Heading>
 
         <Text
@@ -68,20 +75,24 @@ export default function Hero() {
           mb={12}
           color="fg.muted"
           className="animate-fade-in-up"
-          style={{ animationDelay: '0.3s' }}
+          style={{ animationDelay: "0.3s" }}
         >
-          {t('hero.catchphrase.prefix')}
-          <Box as="span" color="fg" fontWeight="medium">{t('hero.catchphrase.highlight1')}</Box>
-          {t('hero.catchphrase.middle')}
-          <Box as="span" color="fg" fontWeight="medium">{t('hero.catchphrase.highlight2')}</Box>
-          {t('hero.catchphrase.suffix')}
+          {t("hero.catchphrase.prefix")}
+          <Box as="span" color="fg" fontWeight="medium">
+            {t("hero.catchphrase.highlight1")}
+          </Box>
+          {t("hero.catchphrase.middle")}
+          <Box as="span" color="fg" fontWeight="medium">
+            {t("hero.catchphrase.highlight2")}
+          </Box>
+          {t("hero.catchphrase.suffix")}
         </Text>
 
         <Flex
           flexDirection={{ base: "column", sm: "row" }}
           gap={4}
           className="animate-fade-in-up"
-          style={{ animationDelay: '0.4s' }}
+          style={{ animationDelay: "0.4s" }}
         >
           <a href="mailto:contact@watarumaeda.com">
             <Button
@@ -93,14 +104,14 @@ export default function Hero() {
               fontWeight="medium"
               colorPalette="blue"
               css={{
-                boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)',
-                transition: 'all 0.3s',
-                '&:hover': {
-                  boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1)'
-                }
+                boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1)",
+                transition: "all 0.3s",
+                "&:hover": {
+                  boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)",
+                },
               }}
             >
-              {t('hero.buttons.contact')}
+              {t("hero.buttons.contact")}
             </Button>
           </a>
           <a href="#works">
@@ -114,16 +125,23 @@ export default function Hero() {
               fontWeight="medium"
               borderWidth={2}
               css={{
-                transition: 'all 0.3s',
-                '& svg': {
-                  transition: 'transform 0.3s'
+                transition: "all 0.3s",
+                "& svg": {
+                  transition: "transform 0.3s",
                 },
-                '&:hover svg': {
-                  transform: 'translateX(0.25rem)'
-                }
+                "&:hover svg": {
+                  transform: "translateX(0.25rem)",
+                },
               }}
             >
-              {t('hero.buttons.projects')} <ArrowRight style={{ marginLeft: '0.5rem', width: '1.25rem', height: '1.25rem' }} />
+              {t("hero.buttons.projects")}{" "}
+              <ArrowRight
+                style={{
+                  marginLeft: "0.5rem",
+                  width: "1.25rem",
+                  height: "1.25rem",
+                }}
+              />
             </Button>
           </a>
         </Flex>
