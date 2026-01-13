@@ -1,4 +1,3 @@
-import { Button } from "@/components/elements/button";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
@@ -53,11 +52,10 @@ export default function Hero() {
           as="h1"
           fontFamily="sans"
           fontWeight="black"
-          fontSize="12vw"
+          fontSize="10vw"
           lineHeight={0.9}
           letterSpacing="tighter"
           color="fg"
-          mb={12}
           className="animate-fade-in-up"
           style={{ animationDelay: "0.2s" }}
         >
@@ -65,32 +63,6 @@ export default function Hero() {
           <br />
           MAEDA
         </Heading>
-
-        <Box
-          className="animate-fade-in-up"
-          style={{ animationDelay: "0.3s" }}
-        >
-          <a href="mailto:contact@watarumaeda.com">
-            <Button
-              size="lg"
-              w={{ base: "full", sm: "auto" }}
-              px={8}
-              py={6}
-              fontSize="lg"
-              fontWeight="medium"
-              colorPalette="blue"
-              css={{
-                boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1)",
-                transition: "all 0.3s",
-                "&:hover": {
-                  boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)",
-                },
-              }}
-            >
-              {t("hero.buttons.contact")}
-            </Button>
-          </a>
-        </Box>
       </Box>
     </Box>
   );
