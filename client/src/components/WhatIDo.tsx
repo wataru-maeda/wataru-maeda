@@ -1,12 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Box, Grid, Heading, Text } from "@chakra-ui/react";
-import { MdPhoneIphone } from "react-icons/md";
-import { FaServer } from "react-icons/fa";
-import { HiSparkles } from "react-icons/hi2";
-import { IoRocket } from "react-icons/io5";
+import { TbDeviceMobile, TbServer, TbSparkles, TbRocket } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
-const icons = [MdPhoneIphone, FaServer, HiSparkles, IoRocket];
+const icons = [TbDeviceMobile, TbServer, TbSparkles, TbRocket];
 
 export default function WhatIDo() {
   const { t } = useTranslation();

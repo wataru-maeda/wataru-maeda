@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Box, Grid, GridItem, Heading, Flex, Text, Link as ChakraLink, VStack } from "@chakra-ui/react";
-import { HiArrowUpRight } from "react-icons/hi2";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { TbArrowUpRight, TbBrandGithub, TbBrandLinkedin, TbMail } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
@@ -40,7 +38,7 @@ export default function Footer() {
                 py={6}
                 borderRadius="full"
               >
-                <MdEmail style={{ marginRight: '0.5rem', height: '1.25rem', width: '1.25rem' }} /> {t('contact.email')}
+                <TbMail style={{ marginRight: '0.5rem', height: '1.25rem', width: '1.25rem' }} /> {t('contact.email')}
               </Button>
             </ChakraLink>
           </Box>
@@ -66,7 +64,7 @@ export default function Footer() {
               }}
             >
               {t('contact.email')}{' '}
-              <HiArrowUpRight
+              <TbArrowUpRight
                 style={{
                   marginLeft: '0.5rem',
                   height: '1.5rem',
@@ -94,7 +92,7 @@ export default function Footer() {
               }}
             >
               {t('contact.github')}{' '}
-              <FaGithub
+              <TbBrandGithub
                 style={{
                   marginLeft: '0.5rem',
                   height: '1.5rem',
@@ -122,7 +120,7 @@ export default function Footer() {
               }}
             >
               {t('contact.linkedin')}{' '}
-              <FaLinkedin
+              <TbBrandLinkedin
                 style={{
                   marginLeft: '0.5rem',
                   height: '1.5rem',

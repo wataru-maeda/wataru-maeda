@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Box, Flex, Text, Heading } from "@chakra-ui/react";
-import { IoArrowForward } from "react-icons/io5";
+import { TbArrowRight } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {
@@ -135,7 +135,7 @@ export default function Hero() {
               }}
             >
               {t("hero.buttons.projects")}{" "}
-              <IoArrowForward
+              <TbArrowRight
                 style={{
                   marginLeft: "0.5rem",
                   width: "1.25rem",

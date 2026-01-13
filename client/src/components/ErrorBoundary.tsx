@@ -1,6 +1,5 @@
 import { Box, Flex, Heading, Button, Code } from "@chakra-ui/react";
-import { MdWarning } from "react-icons/md";
-import { IoReload } from "react-icons/io5";
+import { TbAlertTriangle, TbRefresh } from "react-icons/tb";
 import { Component, ReactNode } from "react";
 
 interface Props {
@@ -40,7 +39,7 @@ class ErrorBoundary extends Component<Props, State> {
             p={8}
           >
             <Box mb={6} flexShrink={0}>
-              <MdWarning size={48} color="var(--destructive)" />
+              <TbAlertTriangle size={48} color="var(--destructive)" />
             </Box>
 
             <Heading as="h2" fontSize="xl" mb={4}>
@@ -82,7 +81,7 @@ class ErrorBoundary extends Component<Props, State> {
                 }
               }}
             >
-              <IoReload size={16} />
+              <TbRefresh size={16} />
               Reload Page
             </Button>
           </Flex>
