@@ -79,6 +79,41 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Language-specific fonts */
+html[lang="en"] body,
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4,
+html[lang="en"] h5,
+html[lang="en"] h6,
+html[lang="en"] p,
+html[lang="en"] span,
+html[lang="en"] div:not(.font-mono):not([class*="mono"]) {
+  font-family: 'Manrope', 'Noto Sans JP', sans-serif !important;
+}
+
+html[lang="ja"] body,
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+html[lang="ja"] h4,
+html[lang="ja"] h5,
+html[lang="ja"] h6,
+html[lang="ja"] p,
+html[lang="ja"] span,
+html[lang="ja"] div:not(.font-mono):not([class*="mono"]) {
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+/* Ensure mono font is preserved */
+.font-mono,
+[class*="mono"],
+code,
+pre {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
 /* Utility classes */
 .min-h-screen { min-height: 100vh; }
 .min-h-0 { min-height: 0; }

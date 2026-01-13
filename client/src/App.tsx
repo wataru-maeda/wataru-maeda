@@ -1,8 +1,9 @@
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { Toaster } from "sonner";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import { useTranslation } from "react-i18next";
+import React from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
 import { system } from "./theme";
@@ -25,18 +26,17 @@ function Router() {
 
 function App() {
   const { i18n } = useTranslation();
-  const isEnglish = i18n.language === 'en';
+
+  // Update html lang attribute when language changes
+  React.useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
 
   return (
     <ErrorBoundary>
       <ChakraProvider value={system}>
-        <Box
-          fontFamily={isEnglish ? "'Manrope', 'Noto Sans JP', sans-serif" : "'Noto Sans JP', sans-serif"}
-          minH="100vh"
-        >
-          <Toaster />
-          <Router />
-        </Box>
+        <Toaster />
+        <Router />
       </ChakraProvider>
     </ErrorBoundary>
   );
