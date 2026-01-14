@@ -21,11 +21,12 @@ export default function PhilosophySection() {
       {philosophyItems.map((item, index) => (
         <GridItem key={`phil-${index}`}>
           <Card.Root
-            bg="bg"
+            bg="#0a0a0a"
             borderRadius="2xl"
             p={6}
-            boxShadow="sm"
             h="full"
+            borderWidth="1px"
+            borderColor="#1a1a1a"
           >
             <Flex alignItems="center" gap={3} mb={3}>
               <Box
@@ -40,11 +41,11 @@ export default function PhilosophySection() {
               >
                 <TbCode size={20} color="#3b82f6" />
               </Box>
-              <Heading as="h3" fontSize="md" fontWeight="bold">
+              <Heading as="h3" fontSize="md" fontWeight="bold" color="#ffffff">
                 {item.title}
               </Heading>
             </Flex>
-            <Text fontSize="sm" color="fg.muted" lineHeight="relaxed">
+            <Text fontSize="sm" color="#999999" lineHeight="relaxed">
               {item.description}
             </Text>
           </Card.Root>

@@ -9,18 +9,12 @@ import FooterSection from "./_sections/FooterSection";
 export default function Home() {
   return (
     <Box
-      // minH="100vh"
-      bg="bg"
-      color="fg"
+      minH="100vh"
+      bg="#000000"
+      color="#ffffff"
       fontFamily="sans"
       px={{ base: 4, md: 6, lg: 8 }}
       py={8}
-      css={{
-        "::selection": {
-          backgroundColor: "var(--primary)",
-          color: "white",
-        },
-      }}
     >
       <LanguageSwitch />
 

@@ -18,11 +18,12 @@ export default function StatsSection() {
         return (
           <Card.Root
             key={index}
-            bg="bg"
+            bg="#0a0a0a"
             borderRadius="2xl"
             p={6}
-            boxShadow="sm"
             flex={1}
+            borderWidth="1px"
+            borderColor="#1a1a1a"
           >
             <Flex alignItems="center" gap={4}>
               <Box
@@ -43,12 +44,13 @@ export default function StatsSection() {
                   fontWeight="bold"
                   lineHeight="1"
                   mb={1}
+                  color="#ffffff"
                 >
                   {stat.value}
                 </Text>
                 <Text
                   fontSize="xs"
-                  color="fg.muted"
+                  color="#999999"
                   textTransform="uppercase"
                   letterSpacing="wide"
                 >

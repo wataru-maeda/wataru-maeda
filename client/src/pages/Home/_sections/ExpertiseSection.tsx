@@ -42,7 +42,7 @@ export default function ExpertiseSection() {
         const tech = serviceTech[index];
         return (
           <GridItem key={index}>
-            <Card.Root bg="bg" borderRadius="2xl" p={6} boxShadow="sm" h="full">
+            <Card.Root bg="#0a0a0a" borderRadius="2xl" p={6} h="full" borderWidth="1px" borderColor="#1a1a1a">
               <Flex alignItems="center" gap={3} mb={4}>
                 <Box
                   w={12}
@@ -56,19 +56,24 @@ export default function ExpertiseSection() {
                 >
                   <Icon size={24} color="#3b82f6" />
                 </Box>
-                <Heading as="h3" fontSize="lg" fontWeight="bold">
+                <Heading as="h3" fontSize="lg" fontWeight="bold" color="#ffffff">
                   {item.title}
                 </Heading>
               </Flex>
-              <Text fontSize="sm" color="fg.muted" mb={4} lineHeight="relaxed">
+              <Text fontSize="sm" color="#999999" mb={4} lineHeight="relaxed">
                 {item.description}
               </Text>
               <Flex flexWrap="wrap" gap={2}>
                 {tech.map((t, i) => (
                   <Badge
                     key={i}
-                    variant="secondary"
-                    className="px-2 py-1 text-xs font-mono rounded-md"
+                    bg="#1a1a1a"
+                    color="#999999"
+                    px={2}
+                    py={1}
+                    fontSize="xs"
+                    fontFamily="mono"
+                    borderRadius="md"
                   >
                     {t}
                   </Badge>
