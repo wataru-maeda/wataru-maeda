@@ -1,11 +1,14 @@
-import { Box, Card, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
-import { Badge } from "@/components/elements/badge";
 import {
-  TbDeviceMobile,
-  TbServer,
-  TbSparkles,
-  TbRocket,
-} from "react-icons/tb";
+  Box,
+  Card,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Text,
+} from "@chakra-ui/react";
+import { Badge } from "@/components/elements/badge";
+import { TbDeviceMobile, TbServer, TbSparkles, TbRocket } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
 const expertiseIcons = [TbDeviceMobile, TbServer, TbSparkles, TbRocket];
@@ -29,7 +32,7 @@ export default function ExpertiseSection() {
       templateColumns={{
         base: "1fr",
         md: "repeat(2, 1fr)",
-        lg: "repeat(3, 1fr)",
+        lg: "repeat(4, 1fr)",
       }}
       gap={4}
       mb={4}
@@ -38,17 +41,8 @@ export default function ExpertiseSection() {
         const Icon = expertiseIcons[index];
         const tech = serviceTech[index];
         return (
-          <GridItem
-            key={index}
-            colSpan={{ base: 1, lg: index % 3 === 0 ? 2 : 1 }}
-          >
-            <Card.Root
-              bg="bg"
-              borderRadius="2xl"
-              p={6}
-              boxShadow="sm"
-              h="full"
-            >
+          <GridItem key={index}>
+            <Card.Root bg="bg" borderRadius="2xl" p={6} boxShadow="sm" h="full">
               <Flex alignItems="center" gap={3} mb={4}>
                 <Box
                   w={12}
@@ -66,12 +60,7 @@ export default function ExpertiseSection() {
                   {item.title}
                 </Heading>
               </Flex>
-              <Text
-                fontSize="sm"
-                color="fg.muted"
-                mb={4}
-                lineHeight="relaxed"
-              >
+              <Text fontSize="sm" color="fg.muted" mb={4} lineHeight="relaxed">
                 {item.description}
               </Text>
               <Flex flexWrap="wrap" gap={2}>
