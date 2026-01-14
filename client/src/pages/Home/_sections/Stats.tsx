@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { TbUsers, TbBriefcase, TbStack } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
-import { HoverCard } from "@/components/ui";
+import { HoverCard } from "@/components/elements";
 
 const statIcons = [TbUsers, TbBriefcase, TbStack];
 
@@ -25,7 +25,7 @@ export default function StatsSection() {
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-                bg="rgba(59, 130, 246, 0.1)"
+                bg="effects.iconBg"
                 borderRadius="xl"
                 flexShrink={0}
                 color="primary.500"

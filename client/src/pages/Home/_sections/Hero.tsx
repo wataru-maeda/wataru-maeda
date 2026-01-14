@@ -43,7 +43,7 @@ export default function HeroSection() {
         boxShadow:
           "0 20px 60px rgba(59, 130, 246, 0.3), 0 0 80px rgba(59, 130, 246, 0.15), inset 0 0 100px rgba(59, 130, 246, 0.05)",
       }}
-      css={{
+      css={(theme) => ({
         "&::before": {
           content: '""',
           position: "absolute",
@@ -51,14 +51,13 @@ export default function HeroSection() {
           left: "-100%",
           width: "100%",
           height: "100%",
-          background:
-            "linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent)",
+          background: theme.token("colors.effects.shimmerGradient"),
           transition: "left 0.6s ease",
         },
         "&:hover::before": {
           left: "100%",
         },
-      }}
+      })}
     >
       <Text
         fontFamily="mono"
@@ -105,7 +104,7 @@ export default function HeroSection() {
               justifyContent="center"
               w={12}
               h={12}
-              bg="rgba(59, 130, 246, 0.1)"
+              bg="effects.iconBg"
               borderRadius="xl"
               color="primary.500"
               _hover={{

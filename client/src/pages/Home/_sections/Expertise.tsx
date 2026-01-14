@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { TbDeviceMobile, TbServer, TbSparkles, TbRocket } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
-import { HoverCard } from "@/components/ui";
+import { HoverCard } from "@/components/elements";
 
 const expertiseIcons = [TbDeviceMobile, TbServer, TbSparkles, TbRocket];
 
@@ -49,7 +49,7 @@ export default function ExpertiseSection() {
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
-                  bg="rgba(59, 130, 246, 0.1)"
+                  bg="effects.iconBg"
                   borderRadius="xl"
                   flexShrink={0}
                   color="primary.500"

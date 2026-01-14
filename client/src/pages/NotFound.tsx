@@ -35,7 +35,7 @@ export default function NotFound() {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            bg="rgba(239, 68, 68, 0.1)"
+            bg="effects.redIconBg"
             borderRadius="full"
             color="red.500"
           >

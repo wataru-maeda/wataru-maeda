@@ -38,6 +38,13 @@ const config = defineConfig({
           textMuted: { value: "#999999" },
           textSubtle: { value: "#666666" },
         },
+        // Effect colors (rgba values)
+        effects: {
+          iconBg: { value: "rgba(59, 130, 246, 0.1)" },
+          redIconBg: { value: "rgba(239, 68, 68, 0.1)" },
+          shimmerGradient: { value: "linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent)" },
+          hoverGradient: { value: "linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.05) 80%, #0a0a0a 100%)" },
+        },
       },
     },
     semanticTokens: {

@@ -19,18 +19,17 @@ export default function HoverCard({
       borderColor="dark.cardBorder"
       transition="all 0.3s ease"
       cursor={enableHover ? "pointer" : "default"}
-      _hover={
-        enableHover
+      css={(theme) => ({
+        "&:hover": enableHover
           ? {
-              borderColor: "primary.500",
+              borderColor: theme.token("colors.primary.500"),
               transform: "translateY(-4px)",
               boxShadow:
                 "0 8px 30px rgba(59, 130, 246, 0.2), 0 0 40px rgba(59, 130, 246, 0.2)",
-              background:
-                "linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.05) 80%, #0a0a0a 100%)",
+              background: theme.token("colors.effects.hoverGradient"),
             }
-          : undefined
-      }
+          : undefined,
+      })}
       {...props}
     >
       {children}

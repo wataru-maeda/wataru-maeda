@@ -7,7 +7,7 @@ import {
   TbWorld
 } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
-import { HoverCard } from "@/components/ui";
+import { HoverCard } from "@/components/elements";
 
 const philosophyIcons = [TbUsers, TbCode, TbBulb, TbRefresh, TbWorld];
 
@@ -39,7 +39,7 @@ export default function PhilosophySection() {
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
-                  bg="rgba(59, 130, 246, 0.1)"
+                  bg="effects.iconBg"
                   borderRadius="lg"
                   flexShrink={0}
                   color="primary.500"
