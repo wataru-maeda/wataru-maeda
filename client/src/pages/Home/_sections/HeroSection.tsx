@@ -28,12 +28,12 @@ const socialLinks = [
 export default function HeroSection() {
   const { t } = useTranslation();
   return (
-    <Card.Root bg="#0a0a0a" borderRadius="2xl" p={8} h="full" borderWidth="1px" borderColor="#1a1a1a">
+    <Card.Root bg="dark.card" borderRadius="2xl" p={8} h="full" borderWidth="1px" borderColor="dark.cardBorder">
       <Text
         fontFamily="mono"
         fontSize="xs"
         letterSpacing="wider"
-        color="#999999"
+        color="dark.textMuted"
         textTransform="uppercase"
         mb={4}
       >
@@ -47,16 +47,16 @@ export default function HeroSection() {
         lineHeight={0.9}
         letterSpacing="tighter"
         mb={6}
-        color="#ffffff"
+        color="dark.textPrimary"
       >
         WATARU
         <br />
-        <Box as="span" color="#3b82f6">
+        <Box as="span" color="primary.500">
           MAEDA
         </Box>
       </Heading>
 
-      <Text fontSize="lg" color="#999999" mb={6} maxW="xl">
+      <Text fontSize="lg" color="dark.textMuted" mb={6} maxW="xl">
         {t("about.description")}
       </Text>
 

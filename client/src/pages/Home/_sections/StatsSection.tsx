@@ -18,12 +18,12 @@ export default function StatsSection() {
         return (
           <Card.Root
             key={index}
-            bg="#0a0a0a"
+            bg="dark.card"
             borderRadius="2xl"
             p={6}
             flex={1}
             borderWidth="1px"
-            borderColor="#1a1a1a"
+            borderColor="dark.cardBorder"
           >
             <Flex alignItems="center" gap={4}>
               <Box
@@ -36,7 +36,7 @@ export default function StatsSection() {
                 borderRadius="xl"
                 flexShrink={0}
               >
-                <Icon size={24} color="#3b82f6" />
+                <Icon size={24} color="primary.500" />
               </Box>
               <Box>
                 <Text
@@ -44,13 +44,13 @@ export default function StatsSection() {
                   fontWeight="bold"
                   lineHeight="1"
                   mb={1}
-                  color="#ffffff"
+                  color="dark.textPrimary"
                 >
                   {stat.value}
                 </Text>
                 <Text
                   fontSize="xs"
-                  color="#999999"
+                  color="dark.textMuted"
                   textTransform="uppercase"
                   letterSpacing="wide"
                 >

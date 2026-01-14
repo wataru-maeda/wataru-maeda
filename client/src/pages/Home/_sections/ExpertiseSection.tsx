@@ -42,7 +42,14 @@ export default function ExpertiseSection() {
         const tech = serviceTech[index];
         return (
           <GridItem key={index}>
-            <Card.Root bg="#0a0a0a" borderRadius="2xl" p={6} h="full" borderWidth="1px" borderColor="#1a1a1a">
+            <Card.Root
+              bg="dark.card"
+              borderRadius="2xl"
+              p={6}
+              h="full"
+              borderWidth="1px"
+              borderColor="dark.cardBorder"
+            >
               <Flex alignItems="center" gap={3} mb={4}>
                 <Box
                   w={12}
@@ -54,29 +61,41 @@ export default function ExpertiseSection() {
                   borderRadius="xl"
                   flexShrink={0}
                 >
-                  <Icon size={24} color="#3b82f6" />
+                  <Icon size={24} color="primary.500" />
                 </Box>
-                <Heading as="h3" fontSize="lg" fontWeight="bold" color="#ffffff">
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="dark.textPrimary"
+                >
                   {item.title}
                 </Heading>
               </Flex>
-              <Text fontSize="sm" color="#999999" mb={4} lineHeight="relaxed">
+              <Text
+                fontSize="sm"
+                color="dark.textMuted"
+                mb={4}
+                lineHeight="relaxed"
+              >
                 {item.description}
               </Text>
               <Flex flexWrap="wrap" gap={2}>
                 {tech.map((t, i) => (
-                  <Badge
+                  <Box
                     key={i}
-                    bg="#1a1a1a"
-                    color="#999999"
+                    as="span"
+                    bg="dark.badgeBg"
+                    color="dark.textMuted"
                     px={2}
                     py={1}
                     fontSize="xs"
                     fontFamily="mono"
                     borderRadius="md"
+                    display="inline-block"
                   >
                     {t}
-                  </Badge>
+                  </Box>
                 ))}
               </Flex>
             </Card.Root>

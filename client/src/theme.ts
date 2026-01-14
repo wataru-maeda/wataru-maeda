@@ -28,6 +28,16 @@ const config = defineConfig({
           800: { value: "#1e40af" },
           900: { value: "#1e3a8a" },
         },
+        // Dark theme colors
+        dark: {
+          bg: { value: "#000000" },
+          card: { value: "#0a0a0a" },
+          cardBorder: { value: "#1a1a1a" },
+          badgeBg: { value: "#1a1a1a" },
+          textPrimary: { value: "#ffffff" },
+          textMuted: { value: "#999999" },
+          textSubtle: { value: "#666666" },
+        },
       },
     },
     semanticTokens: {

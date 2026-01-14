@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <Box
       minH="100vh"
-      bg="#000000"
-      color="#ffffff"
+      bg="dark.bg"
+      color="dark.textPrimary"
       fontFamily="sans"
       px={{ base: 4, md: 6, lg: 8 }}
       py={8}
