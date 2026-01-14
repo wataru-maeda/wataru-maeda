@@ -10,7 +10,7 @@ Full-stack engineer passionate about building products that people love. I've sp
 
 ### What I Work With
 
-|                    |                                                                                   |
+| Category           | Technologies                                                                      |
 | ------------------ | --------------------------------------------------------------------------------- |
 | **Frontend**       | ![Frontend](https://skillicons.dev/icons?i=react,nextjs,vite,ts,swift,kotlin)     |
 | **Backend**        | ![Backend](https://skillicons.dev/icons?i=nodejs,nestjs,graphql,mongodb,postgres) |
