@@ -4,7 +4,7 @@ Full-stack engineer passionate about building products that people love. I've sp
 
 <div align="center">
 
-💼 [LinkedIn](https://www.linkedin.com/in/wtr0716/) · 🌐 [Portfolio](https://watarumaeda.com/) · 📧 w.maeda.ca@gmail.com
+[LinkedIn](https://www.linkedin.com/in/wtr0716/) | [Portfolio](https://watarumaeda.com/) · | w.maeda.ca@gmail.com
 
 </div>
 
