@@ -1,34 +1,30 @@
-# Hi There 👋
+# Hi, I'm Wataru 👋
 
-**Full Stack Engineer** with 13+ years building scalable applications across web, mobile, and cloud.
+Full-stack engineer passionate about building products that people love. I've spent 13+ years crafting everything from mobile apps to cloud infrastructure, always focusing on what actually matters—great user experiences and solid engineering.
 
-🌐 [watarumaeda.com](https://watarumaeda.com/) | 💼 [LinkedIn](https://www.linkedin.com/in/wtr0716/) | 📧 w.maeda.ca@gmail.com
+When I'm not coding, I'm exploring new technologies and ways to make development faster and better.
 
-### Tech Stack
+### What I Work With
 
-[![My Skills](https://skillicons.dev/icons?i=react,nextjs,vite,ts,swift,kotlin,nodejs,nestjs,graphql,aws,gcp,terraform,docker,mongodb,postgres,githubactions)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,nextjs,vite,ts,swift,kotlin,nodejs,nestjs,graphql,aws,gcp,terraform,docker,mongodb,postgres)](https://skillicons.dev)
 
-### Current Focus
+### Philosophy
 
-- 🔭 AI-powered apps
-- 🌱 advanced cloud architecture
-- 👯 Open to collaborating on full-stack projects
+I believe in writing clean, maintainable code that solves real problems. Always learning, always improving, and always putting users first.
 
-### Open Source
+### Beyond Code
 
-- [react-native-boilerplate](https://github.com/wataru-maeda/react-native-boilerplate) - Production-ready RN starter
-- [react-firebase-boilerplate](https://github.com/wataru-maeda/react-firebase-boilerplate) - React + Firebase kit
+🐠 Marine life enthusiast
+✈️ Love exploring new places
+🏃 Staying active and healthy
 
----
+### Things I've Built
 
-<details>
-  <summary>📊 GitHub Stats</summary>
-  <br/>
+Starter kits and tools I've shared with the community:
 
-[![My github stats](https://github-readme-stats.vercel.app/api?username=wataru-maeda&count_private=true&show_icons=true&hide_border=true&theme=tokyonight)](https://github.com/wataru-maeda)
+- [**react-native-boilerplate**](https://github.com/wataru-maeda/react-native-boilerplate) — Jump-start your React Native projects
+- [**react-firebase-boilerplate**](https://github.com/wataru-maeda/react-firebase-boilerplate) — React + Firebase, ready to go
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=wataru-maeda&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
+### Let's Connect
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=wataru-maeda&layout=compact&hide=makefile,c++&hide_border=true&theme=tokyonight)](https://github.com/wataru-maeda)
-
-</details>
+💼 [LinkedIn](https://www.linkedin.com/in/wtr0716/) · 🌐 [Portfolio](https://watarumaeda.com/) · 📧 w.maeda.ca@gmail.com
