@@ -15,12 +15,15 @@ const serviceTech = [
   // Generative AI Integration
   ["OpenAI", "Anthropic", "LangChain", "Ollama", "AWS", "GCP"],
   // Automation Support
-  ["n8n", "GitHub Actions", "Terraform", "AWS", "GCP"]
+  ["n8n", "GitHub Actions", "Terraform", "AWS", "GCP"],
 ];
 
 export default function WhatIDo() {
   const { t } = useTranslation();
-  const items = t('works.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const items = t("works.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
 
   return (
     <Box
@@ -41,10 +44,7 @@ export default function WhatIDo() {
           Expertise
         </Heading>
 
-        <Grid
-          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
-          gap={6}
-        >
+        <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={6}>
           {items.map((item, index) => {
             const Icon = icons[index];
             const tech = serviceTech[index];
@@ -64,35 +64,30 @@ export default function WhatIDo() {
                       display="flex"
                       alignItems="center"
                       justifyContent="center"
-                      bg="bg.subtle"
+                      bg="#000000"
                       borderRadius="xl"
                       transition="all 0.3s"
                       css={{
-                        '.group:hover &': {
-                          backgroundColor: 'rgba(37, 99, 235, 0.1)'
+                        ".group:hover &": {
+                          backgroundColor: "#3b82f6",
                         },
-                        '& svg': {
-                          transition: 'all 0.3s',
-                          color: '#000000'
+                        "& svg": {
+                          transition: "all 0.3s",
+                          color: "#FFFFFF",
                         },
-                        '.group:hover & svg': {
-                          color: '#3b82f6'
-                        }
                       }}
                     >
                       <Icon size={40} />
                     </Box>
-                    <CardTitle className="text-xl font-bold mb-4">{item.title}</CardTitle>
+                    <CardTitle className="text-xl font-bold mb-4">
+                      {item.title}
+                    </CardTitle>
                     <Text color="fg.muted" lineHeight="relaxed" mb={4}>
                       {item.description}
                     </Text>
                     <Flex flexWrap="wrap" gap={2} mt={4}>
                       {tech.map((t, i) => (
-                        <Badge
-                          key={i}
-                          variant="secondary"
-                          className="px-3 py-1 text-xs font-mono font-normal bg-secondary hover:bg-secondary/80 text-foreground rounded-md"
-                        >
+                        <Badge key={i} variant="secondary">
                           {t}
                         </Badge>
                       ))}
