@@ -1,6 +1,5 @@
 import {
   Box,
-  Card,
   Flex,
   Grid,
   GridItem,
@@ -9,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { TbDeviceMobile, TbServer, TbSparkles, TbRocket } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
+import { HoverCard } from "@/components/ui";
 
 const expertiseIcons = [TbDeviceMobile, TbServer, TbSparkles, TbRocket];
 
@@ -41,14 +41,7 @@ export default function ExpertiseSection() {
         const tech = serviceTech[index];
         return (
           <GridItem key={index}>
-            <Card.Root
-              bg="dark.card"
-              borderRadius="2xl"
-              p={6}
-              h="full"
-              borderWidth="1px"
-              borderColor="dark.cardBorder"
-            >
+            <HoverCard p={6} h="full">
               <Flex alignItems="center" gap={3} mb={4}>
                 <Box
                   w={12}
@@ -98,7 +91,7 @@ export default function ExpertiseSection() {
                   </Box>
                 ))}
               </Flex>
-            </Card.Root>
+            </HoverCard>
           </GridItem>
         );
       })}

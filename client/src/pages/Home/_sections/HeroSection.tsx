@@ -1,6 +1,5 @@
 import {
   Box,
-  Card,
   Heading,
   Text,
   Flex,
@@ -8,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { TbBrandGithub, TbBrandLinkedin, TbMail } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
+import { HoverCard } from "@/components/ui";
 
 const socialLinks = [
   { icon: TbMail, href: "mailto:contact@watarumaeda.com", label: "Email" },
@@ -28,7 +28,7 @@ const socialLinks = [
 export default function HeroSection() {
   const { t } = useTranslation();
   return (
-    <Card.Root bg="dark.card" borderRadius="2xl" p={8} h="full" borderWidth="1px" borderColor="dark.cardBorder">
+    <HoverCard p={8} h="full" enableHover={false}>
       <Text
         fontFamily="mono"
         fontSize="xs"
@@ -90,6 +90,6 @@ export default function HeroSection() {
           );
         })}
       </Flex>
-    </Card.Root>
+    </HoverCard>
   );
 }

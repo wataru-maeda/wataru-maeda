@@ -1,4 +1,4 @@
-import { Box, Card, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import {
   TbUsers,
   TbCode,
@@ -7,6 +7,7 @@ import {
   TbWorld
 } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
+import { HoverCard } from "@/components/ui";
 
 const philosophyIcons = [TbUsers, TbCode, TbBulb, TbRefresh, TbWorld];
 
@@ -30,14 +31,7 @@ export default function PhilosophySection() {
         const Icon = philosophyIcons[index];
         return (
           <GridItem key={`phil-${index}`}>
-            <Card.Root
-              bg="dark.card"
-              borderRadius="2xl"
-              p={6}
-              h="full"
-              borderWidth="1px"
-              borderColor="dark.cardBorder"
-            >
+            <HoverCard p={6} h="full">
               <Flex alignItems="center" gap={3} mb={3}>
                 <Box
                   w={10}
@@ -59,7 +53,7 @@ export default function PhilosophySection() {
               <Text fontSize="sm" color="dark.textMuted" lineHeight="relaxed">
                 {item.description}
               </Text>
-            </Card.Root>
+            </HoverCard>
           </GridItem>
         );
       })}
