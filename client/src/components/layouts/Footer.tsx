@@ -1,10 +1,29 @@
-import { Button } from "@/components/elements/button";
-import { Box, Grid, GridItem, Heading, Flex, Text, Link as ChakraLink, VStack } from "@chakra-ui/react";
-import { TbArrowUpRight, TbBrandGithub, TbBrandLinkedin, TbMail } from "react-icons/tb";
+import { Box, Heading, Flex, Text, Link as ChakraLink } from "@chakra-ui/react";
+import { TbBrandGithub, TbBrandLinkedin, TbMail } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { t } = useTranslation();
+
+  const socialLinks = [
+    {
+      icon: TbMail,
+      href: "mailto:contact@watarumaeda.com",
+      label: "Email",
+    },
+    {
+      icon: TbBrandGithub,
+      href: "https://github.com/wataru-maeda",
+      label: "GitHub",
+      external: true,
+    },
+    {
+      icon: TbBrandLinkedin,
+      href: "https://www.linkedin.com/in/wataru-maeda",
+      label: "LinkedIn",
+      external: true,
+    },
+  ];
 
   return (
     <Box
@@ -14,125 +33,53 @@ export default function Footer() {
       bg="rgba(241, 245, 249, 0.3)"
     >
       <Box maxW="7xl" mx="auto">
-        <Grid
-          templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
-          gap={16}
-          mb={24}
-          className="scroll-animate"
-        >
-          <Box>
-            <Heading
-              as="h2"
-              fontSize={{ base: "4xl", md: "6xl" }}
-              fontWeight="bold"
-              letterSpacing="tighter"
-              mb={8}
-            >
-              {t('contact.title')}
-            </Heading>
-            <ChakraLink href="mailto:contact@watarumaeda.com">
-              <Button
-                size="lg"
-                fontSize="lg"
-                px={8}
-                py={6}
-                borderRadius="full"
-              >
-                <TbMail style={{ marginRight: '0.5rem', height: '1.25rem', width: '1.25rem' }} /> {t('contact.email')}
-              </Button>
-            </ChakraLink>
-          </Box>
-
-          <Flex
-            flexDirection="column"
-            justifyContent="end"
-            alignItems={{ base: "start", lg: "end" }}
-            gap={6}
+        <Box mb={24} className="scroll-animate">
+          <Heading
+            as="h2"
+            fontSize={{ base: "4xl", md: "6xl" }}
+            fontWeight="bold"
+            letterSpacing="tighter"
+            mb={12}
           >
-            <ChakraLink
-              href="mailto:contact@watarumaeda.com"
-              className="group"
-              display="flex"
-              alignItems="center"
-              fontSize="2xl"
-              fontWeight="medium"
-              transition="color 0.3s"
-              css={{
-                '&:hover': {
-                  color: 'var(--primary)'
-                }
-              }}
-            >
-              {t('contact.email')}{' '}
-              <TbArrowUpRight
-                style={{
-                  marginLeft: '0.5rem',
-                  height: '1.5rem',
-                  width: '1.5rem',
-                  opacity: 0,
-                  transition: 'all 0.3s'
-                }}
-                className="group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"
-              />
-            </ChakraLink>
-            <ChakraLink
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-              display="flex"
-              alignItems="center"
-              fontSize="2xl"
-              fontWeight="medium"
-              transition="color 0.3s"
-              css={{
-                '&:hover': {
-                  color: 'var(--primary)'
-                }
-              }}
-            >
-              {t('contact.github')}{' '}
-              <TbBrandGithub
-                style={{
-                  marginLeft: '0.5rem',
-                  height: '1.5rem',
-                  width: '1.5rem',
-                  opacity: 0,
-                  transition: 'all 0.3s'
-                }}
-                className="group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"
-              />
-            </ChakraLink>
-            <ChakraLink
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-              display="flex"
-              alignItems="center"
-              fontSize="2xl"
-              fontWeight="medium"
-              transition="color 0.3s"
-              css={{
-                '&:hover': {
-                  color: 'var(--primary)'
-                }
-              }}
-            >
-              {t('contact.linkedin')}{' '}
-              <TbBrandLinkedin
-                style={{
-                  marginLeft: '0.5rem',
-                  height: '1.5rem',
-                  width: '1.5rem',
-                  opacity: 0,
-                  transition: 'all 0.3s'
-                }}
-                className="group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"
-              />
-            </ChakraLink>
+            {t('contact.title')}
+          </Heading>
+
+          <Flex gap={6} flexWrap="wrap">
+            {socialLinks.map((link, index) => {
+              const Icon = link.icon;
+              return (
+                <ChakraLink
+                  key={index}
+                  href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                  className="group"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  w={16}
+                  h={16}
+                  bg="#000000"
+                  borderRadius="xl"
+                  transition="all 0.3s"
+                  css={{
+                    '&:hover': {
+                      backgroundColor: '#3b82f6',
+                      transform: 'translateY(-4px)'
+                    },
+                    '& svg': {
+                      transition: 'all 0.3s',
+                      color: '#FFFFFF'
+                    }
+                  }}
+                  aria-label={link.label}
+                >
+                  <Icon size={32} />
+                </ChakraLink>
+              );
+            })}
           </Flex>
-        </Grid>
+        </Box>
 
         <Flex
           pt={8}
