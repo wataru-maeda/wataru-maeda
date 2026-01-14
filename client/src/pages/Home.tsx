@@ -86,7 +86,7 @@ export default function Home() {
     >
       <LanguageSwitch />
 
-      <Box maxW="1400px" mx="auto">
+      <Box maxW="8xl" mx="auto">
         {/* Hero + Stats Bento Grid */}
         <Grid templateColumns={{ base: "1fr", lg: "2fr 1fr" }} gap={4} mb={4}>
           {/* Hero Card */}
@@ -124,19 +124,13 @@ export default function Home() {
 
               <Flex gap={3} flexWrap="wrap">
                 <a href="mailto:contact@watarumaeda.com">
-                  <Button
-                    size="md"
-                    px={6}
-                    colorPalette="blue"
-                    borderRadius="full"
-                  >
+                  <Button px={6} colorPalette="blue" borderRadius="full">
                     {t("hero.buttons.contact")}
                   </Button>
                 </a>
                 <a href="#expertise">
                   <Button
                     variant="outline"
-                    size="md"
                     px={6}
                     borderRadius="full"
                     borderWidth={2}
@@ -201,7 +195,7 @@ export default function Home() {
           </GridItem>
         </Grid>
 
-        {/* Expertise + Philosophy Bento Grid */}
+        {/* Expertise Bento Grid */}
         <Grid
           templateColumns={{
             base: "1fr",
@@ -267,9 +261,19 @@ export default function Home() {
               </GridItem>
             );
           })}
+        </Grid>
 
-          {/* Philosophy Cards */}
-          {philosophyItems.slice(0, 2).map((item, index) => (
+        {/* Philosophy Bento Grid */}
+        <Grid
+          templateColumns={{
+            base: "1fr",
+            sm: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
+          gap={4}
+          mb={4}
+        >
+          {philosophyItems.map((item, index) => (
             <GridItem key={`phil-${index}`}>
               <Card.Root
                 bg="bg"
@@ -295,36 +299,6 @@ export default function Home() {
                     {item.title}
                   </Heading>
                 </Flex>
-                <Text fontSize="sm" color="fg.muted" lineHeight="relaxed">
-                  {item.description}
-                </Text>
-              </Card.Root>
-            </GridItem>
-          ))}
-        </Grid>
-
-        {/* Philosophy Grid */}
-        <Grid
-          templateColumns={{
-            base: "1fr",
-            sm: "repeat(2, 1fr)",
-            lg: "repeat(3, 1fr)",
-          }}
-          gap={4}
-          mb={4}
-        >
-          {philosophyItems.slice(2).map((item, index) => (
-            <GridItem key={`phil-rest-${index}`}>
-              <Card.Root
-                bg="bg"
-                borderRadius="2xl"
-                p={6}
-                boxShadow="sm"
-                h="full"
-              >
-                <Heading as="h3" fontSize="md" fontWeight="bold" mb={3}>
-                  {item.title}
-                </Heading>
                 <Text fontSize="sm" color="fg.muted" lineHeight="relaxed">
                   {item.description}
                 </Text>
