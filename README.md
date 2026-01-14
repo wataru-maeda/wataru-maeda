@@ -10,11 +10,8 @@ Full-stack engineer passionate about building products that people love. I've sp
 
 ### What I Work With
 
-| Frontend                                          | Backend                                                | Infrastructure                                         |
-| ------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| ![React](https://skillicons.dev/icons?i=react)    | ![Node.js](https://skillicons.dev/icons?i=nodejs)      | ![AWS](https://skillicons.dev/icons?i=aws)             |
-| ![Next.js](https://skillicons.dev/icons?i=nextjs) | ![NestJS](https://skillicons.dev/icons?i=nestjs)       | ![GCP](https://skillicons.dev/icons?i=gcp)             |
-| ![Vite](https://skillicons.dev/icons?i=vite)      | ![GraphQL](https://skillicons.dev/icons?i=graphql)     | ![Terraform](https://skillicons.dev/icons?i=terraform) |
-| ![TypeScript](https://skillicons.dev/icons?i=ts)  | ![MongoDB](https://skillicons.dev/icons?i=mongodb)     | ![Docker](https://skillicons.dev/icons?i=docker)       |
-| ![Swift](https://skillicons.dev/icons?i=swift)    | ![PostgreSQL](https://skillicons.dev/icons?i=postgres) |                                                        |
-| ![Kotlin](https://skillicons.dev/icons?i=kotlin)  |                                                        |                                                        |
+|                    |                                                   |                                                   |                                                        |                                                    |                                                        |                                                  |
+| ------------------ | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------ |
+| **Frontend**       | ![React](https://skillicons.dev/icons?i=react)    | ![Next.js](https://skillicons.dev/icons?i=nextjs) | ![Vite](https://skillicons.dev/icons?i=vite)           | ![TypeScript](https://skillicons.dev/icons?i=ts)   | ![Swift](https://skillicons.dev/icons?i=swift)         | ![Kotlin](https://skillicons.dev/icons?i=kotlin) |
+| **Backend**        | ![Node.js](https://skillicons.dev/icons?i=nodejs) | ![NestJS](https://skillicons.dev/icons?i=nestjs)  | ![GraphQL](https://skillicons.dev/icons?i=graphql)     | ![MongoDB](https://skillicons.dev/icons?i=mongodb) | ![PostgreSQL](https://skillicons.dev/icons?i=postgres) |                                                  |
+| **Infrastructure** | ![AWS](https://skillicons.dev/icons?i=aws)        | ![GCP](https://skillicons.dev/icons?i=gcp)        | ![Terraform](https://skillicons.dev/icons?i=terraform) | ![Docker](https://skillicons.dev/icons?i=docker)   |                                                        |                                                  |
