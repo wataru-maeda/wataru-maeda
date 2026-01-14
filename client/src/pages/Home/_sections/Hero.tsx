@@ -8,8 +8,7 @@ import {
 import { TbBrandGithub, TbBrandLinkedin, TbMail } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
-const socialLinks = [
-  { icon: TbMail, href: "mailto:contact@watarumaeda.com", label: "Email" },
+const socialLinksStatic = [
   {
     icon: TbBrandGithub,
     href: "https://github.com/wataru-maeda",
@@ -18,14 +17,22 @@ const socialLinks = [
   },
   {
     icon: TbBrandLinkedin,
-    href: "https://www.linkedin.com/in/wataru-maeda",
+    href: "https://www.linkedin.com/in/wtr0716/",
     label: "LinkedIn",
     external: true,
   },
 ];
 
 export default function HeroSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const emailLink = {
+    icon: TbMail,
+    href: i18n.language === "ja" ? "mailto:w.maeda.jp@gmail.com" : "mailto:w.maeda.ca@gmail.com",
+    label: "Email",
+  };
+
+  const socialLinks = [emailLink, ...socialLinksStatic];
   return (
     <Box
       bg="dark.card"
