@@ -1,6 +1,4 @@
-import { Button } from "@/components/elements/button";
-import { Card, CardContent } from "@/components/elements/card";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button } from "@chakra-ui/react";
 import { TbAlertCircle, TbHome } from "react-icons/tb";
 import { useLocation } from "wouter";
 
@@ -17,54 +15,82 @@ export default function NotFound() {
       w="full"
       alignItems="center"
       justifyContent="center"
-      className="bg-gradient-to-br from-slate-50 to-slate-100"
+      bg="dark.bg"
+      px={4}
     >
-      <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-        <CardContent className="pt-8 pb-8 text-center">
-          <Flex justifyContent="center" mb={6}>
-            <Box position="relative">
-              <Box
-                position="absolute"
-                inset={0}
-                bg="red.100"
-                borderRadius="full"
-                className="animate-pulse"
-              />
-              <Box position="relative">
-                <TbAlertCircle style={{ height: '4rem', width: '4rem', color: '#ef4444' }} />
-              </Box>
-            </Box>
-          </Flex>
-
-          <Heading as="h1" fontSize="4xl" fontWeight="bold" color="slate.900" mb={2}>
-            404
-          </Heading>
-
-          <Heading as="h2" fontSize="xl" fontWeight="semibold" color="slate.700" mb={4}>
-            Page Not Found
-          </Heading>
-
-          <Text color="slate.600" mb={8} lineHeight="relaxed">
-            Sorry, the page you are looking for doesn't exist.
-            <br />
-            It may have been moved or deleted.
-          </Text>
-
-          <Flex
-            flexDirection={{ base: "column", sm: "row" }}
-            gap={3}
+      <Box
+        maxW="lg"
+        w="full"
+        bg="dark.card"
+        borderRadius="2xl"
+        borderWidth="1px"
+        borderColor="dark.cardBorder"
+        p={8}
+        textAlign="center"
+      >
+        <Flex justifyContent="center" mb={6}>
+          <Box
+            w={16}
+            h={16}
+            display="flex"
+            alignItems="center"
             justifyContent="center"
+            bg="rgba(239, 68, 68, 0.1)"
+            borderRadius="full"
+            color="red.500"
           >
-            <Button
-              onClick={handleGoHome}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              <TbHome style={{ width: '1rem', height: '1rem', marginRight: '0.5rem' }} />
-              Go Home
-            </Button>
+            <TbAlertCircle size={40} />
+          </Box>
+        </Flex>
+
+        <Heading
+          as="h1"
+          fontSize="6xl"
+          fontWeight="black"
+          color="dark.textPrimary"
+          mb={6}
+          letterSpacing="tight"
+        >
+          404
+        </Heading>
+
+        <Heading
+          as="h2"
+          fontSize="2xl"
+          fontWeight="bold"
+          color="dark.textPrimary"
+          mb={4}
+        >
+          Page Not Found
+        </Heading>
+
+        <Text color="dark.textMuted" mb={8} lineHeight="relaxed">
+          Sorry, the page you are looking for doesn't exist.
+          <br />
+          It may have been moved or deleted.
+        </Text>
+
+        <Button
+          onClick={handleGoHome}
+          bg="primary.500"
+          color="dark.textPrimary"
+          px={6}
+          py={6}
+          borderRadius="xl"
+          fontWeight="semibold"
+          _hover={{
+            bg: "primary.600",
+            transform: "translateY(-2px)",
+            boxShadow: "0 8px 20px rgba(59, 130, 246, 0.4)",
+          }}
+          transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+        >
+          <Flex alignItems="center" gap={2}>
+            <TbHome size={20} />
+            Go Home
           </Flex>
-        </CardContent>
-      </Card>
+        </Button>
+      </Box>
     </Flex>
   );
 }
