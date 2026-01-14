@@ -1,37 +1,25 @@
-<h1>Hi There👋</h1>
+# Hey there! 👋 I'm Wataru
 
-<b>I'm Wataru</b>. I'm full-stack developer - have experienced building native apps (Swift/Objective-C/Java), hybrid apps (React Native), and web apps (ReactJs) as well as developing backend (Nodejs, Express, GraphQL, MongoDB, Postgres, GCP, AWS). 
+Welcome! I'm a full-stack engineer who genuinely loves building products that make people's lives easier. Over the past decade+, I've been lucky enough to work on all sorts of projects—from mobile apps that fit in your pocket to cloud infrastructure that powers businesses behind the scenes.
 
-- 💻 I’m currently working on Reactjs, Nodejs, GraphQL, MongoDB, AWS, React Native
-- 👨‍🎓 I’m currently learning SwiftUI, Next.js, CGP
-- 🧑‍🤝‍🧑 I’m looking to collaborate with other developers or designers to work on new projects
-- 👨‍💻 My portfolio website [https://watarumaeda.com/](https://watarumaeda.com/)
-- 📫 Reach me at w.maeda.ca@gmail.com
+I believe the best technology is the kind you don't have to think about—it simply does what you need it to do.
 
-### Languages and Tools:
-[![My Skills](https://skillicons.dev/icons?i=css,docker,figma,git,html,js,mongodb,mysql,nodejs,postgres,react,swift,ts,vim,firebase,gatsby,graphql,sass,vscode)](https://skillicons.dev)
+---
 
-<details>
-  <summary style="color:gray">More Details⚡</summary>
+### 🛠️ Tech I Love Working With
 
-### Github Stats:
+Whether it's building sleek frontends, robust backends, or scalable cloud systems, here's what I reach for:
 
-[![My github stats](https://github-readme-stats.vercel.app/api?username=wataru-maeda&count_private=true&show_icons=true&hide_border=true&&theme=tokyonight)](https://github.com/wataru-maeda)[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=wataru-maeda&theme=tokyonight&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats) 
-  
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=wataru-maeda&layout=compact&hide=makefile,c++&hide_border=true&&theme=tokyonight)](https://github.com/wataru-maeda)
+![Tech Stack](https://skillicons.dev/icons?i=ts,react,nextjs,vite,swift,kotlin,nodejs,nestjs,graphql,mongodb,postgres,aws,gcp,terraform,docker)
 
-### Published Templates/Libraries:
+---
 
-- [react-native-boilerplate](https://github.com/wataru-maeda/react-native-boilerplate)
-- [react-firebase-boilerplate](https://github.com/wataru-maeda/react-firebase-boilerplate)
-- [swift-boilerplate](https://github.com/wataru-maeda/swift-boilerplate)
-- [node-graphql-boilerplate](https://github.com/wataru-maeda/node-graphql-boilerplate)
-- [pageMenuView](https://github.com/wataru-maeda/pageMenuView)
-- [multiSlideMenu](https://github.com/wataru-maeda/multiSlideMenu)
-- [speaker](https://github.com/wataru-maeda/speaker)
-  
-### Visitor Counter:
+### 💬 Let's Connect!
 
-<img alt="me" width="50%" src="https://profile-counter.glitch.me/wataru-maeda/count.svg" />
+Always happy to chat about interesting projects, share ideas, or collaborate on something cool. Feel free to reach out!
 
-</details>
+<div align="center">
+
+💼 [LinkedIn](https://www.linkedin.com/in/wtr0716/) | 🌐 [Portfolio](https://watarumaeda.com/) | 📧 w.maeda.ca@gmail.com
+
+</div>
