@@ -30,7 +30,7 @@ export default function WhatIDo() {
       as="section"
       py={24}
       px={{ base: 6, md: 12, lg: 24 }}
-      bg="rgba(241, 245, 249, 0.3)"
+      bg="rgba(241, 245, 249, 0.8)"
     >
       <Box maxW="7xl" mx="auto">
         <Heading
