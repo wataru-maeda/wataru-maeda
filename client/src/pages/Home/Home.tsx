@@ -1,10 +1,10 @@
 import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { LanguageSwitch } from "@/components/layouts/LanguageSwitch";
-import HeroSection from "./_sections/HeroSection";
-import StatsSection from "./_sections/StatsSection";
-import ExpertiseSection from "./_sections/ExpertiseSection";
-import PhilosophySection from "./_sections/PhilosophySection";
-import FooterSection from "./_sections/FooterSection";
+import Hero from "./_sections/Hero";
+import Stats from "./_sections/Stats";
+import Expertise from "./_sections/Expertise";
+import Philosophy from "./_sections/Philosophy";
+import Footer from "./_sections/Footer";
 
 export default function Home() {
   return (
@@ -22,21 +22,21 @@ export default function Home() {
         {/* Hero + Stats Bento Grid */}
         <Grid templateColumns={{ base: "1fr", lg: "2fr 1fr" }} gap={4} mb={4}>
           <GridItem>
-            <HeroSection />
+            <Hero />
           </GridItem>
           <GridItem>
-            <StatsSection />
+            <Stats />
           </GridItem>
         </Grid>
 
         {/* Expertise Bento Grid */}
-        <ExpertiseSection />
+        <Expertise />
 
         {/* Philosophy Bento Grid */}
-        <PhilosophySection />
+        <Philosophy />
 
         {/* Footer */}
-        <FooterSection />
+        <Footer />
       </Box>
     </Box>
   );

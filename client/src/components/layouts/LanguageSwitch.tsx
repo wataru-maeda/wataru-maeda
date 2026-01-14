@@ -1,4 +1,4 @@
-import { Box, Flex, Button } from "@chakra-ui/react";
+import { Flex, Button } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 
@@ -29,39 +29,39 @@ export function LanguageSwitch({ className }: { className?: string }) {
       boxShadow="sm"
     >
       <Button
-        onClick={() => changeLanguage('en')}
+        onClick={() => changeLanguage("en")}
         px={3}
         py={1}
         borderRadius="full"
         fontSize="xs"
         fontWeight="bold"
         transition="all 0.3s"
-        bg={currentLanguage === 'en' ? 'primary' : 'transparent'}
-        color={currentLanguage === 'en' ? 'white' : 'fg.muted'}
-        boxShadow={currentLanguage === 'en' ? 'sm' : 'none'}
+        bg={currentLanguage === "en" ? "primary" : "transparent"}
+        color={currentLanguage === "en" ? "white" : "fg.muted"}
+        boxShadow={currentLanguage === "en" ? "sm" : "none"}
         css={{
-          '&:hover': {
-            color: currentLanguage === 'en' ? 'white' : 'var(--foreground)'
-          }
+          "&:hover": {
+            color: currentLanguage === "en" ? "white" : "var(--foreground)",
+          },
         }}
       >
         EN
       </Button>
       <Button
-        onClick={() => changeLanguage('ja')}
+        onClick={() => changeLanguage("ja")}
         px={3}
         py={1}
         borderRadius="full"
         fontSize="xs"
         fontWeight="bold"
         transition="all 0.3s"
-        bg={currentLanguage === 'ja' ? 'primary' : 'transparent'}
-        color={currentLanguage === 'ja' ? 'white' : 'fg.muted'}
-        boxShadow={currentLanguage === 'ja' ? 'sm' : 'none'}
+        bg={currentLanguage === "ja" ? "primary" : "transparent"}
+        color={currentLanguage === "ja" ? "white" : "fg.muted"}
+        boxShadow={currentLanguage === "ja" ? "sm" : "none"}
         css={{
-          '&:hover': {
-            color: currentLanguage === 'ja' ? 'white' : 'var(--foreground)'
-          }
+          "&:hover": {
+            color: currentLanguage === "ja" ? "white" : "var(--foreground)",
+          },
         }}
       >
         JP
