@@ -12,8 +12,8 @@ Full-stack engineer passionate about building products that people love. I've sp
 
 | Category           | Technologies                                                                      |
 | ------------------ | --------------------------------------------------------------------------------- |
-| **Core Languages** | ![Core](https://skillicons.dev/icons?i=ts)                                        |
-| **Mobile**         | ![Mobile](https://skillicons.dev/icons?i=react,expo,swift,kotlin)                 |
+| **Core**           | ![Core](https://skillicons.dev/icons?i=ts)                                        |
+| **Mobile**         | ![Mobile](https://skillicons.dev/icons?i=react,swift,kotlin)                      |
 | **Web**            | ![Web](https://skillicons.dev/icons?i=react,nextjs,vite)                          |
 | **Backend**        | ![Backend](https://skillicons.dev/icons?i=nodejs,nestjs,graphql,mongodb,postgres) |
 | **Infrastructure** | ![Infrastructure](https://skillicons.dev/icons?i=aws,gcp,terraform,docker)        |
