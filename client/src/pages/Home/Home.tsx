@@ -4,13 +4,12 @@ import HeroSection from "./_sections/HeroSection";
 import StatsSection from "./_sections/StatsSection";
 import ExpertiseSection from "./_sections/ExpertiseSection";
 import PhilosophySection from "./_sections/PhilosophySection";
-import ContactSection from "./_sections/ContactSection";
+import FooterSection from "./_sections/FooterSection";
 
 export default function Home() {
-
   return (
     <Box
-      minH="100vh"
+      // minH="100vh"
       bg="bg"
       color="fg"
       fontFamily="sans"
@@ -43,7 +42,7 @@ export default function Home() {
         <PhilosophySection />
 
         {/* Footer */}
-        <ContactSection />
+        <FooterSection />
       </Box>
     </Box>
   );
