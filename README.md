@@ -10,12 +10,4 @@ Full-stack engineer passionate about building products that people love. I've sp
 
 ### What I Work With
 
-**Core:** ![TS](https://skillicons.dev/icons?i=ts)
-
-**Mobile:** ![Mobile](https://skillicons.dev/icons?i=react,swift,kotlin)
-
-**Web:** ![Web](https://skillicons.dev/icons?i=react,nextjs,vite)
-
-**Backend:** ![Backend](https://skillicons.dev/icons?i=nodejs,nestjs,graphql,mongodb,postgres)
-
-**Infrastructure:** ![Infrastructure](https://skillicons.dev/icons?i=aws,gcp,terraform,docker)
+![Tech Stack](https://skillicons.dev/icons?i=ts,react,nextjs,vite,swift,kotlin,nodejs,nestjs,graphql,mongodb,postgres,aws,gcp,terraform,docker)
