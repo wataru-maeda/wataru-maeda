@@ -3,7 +3,6 @@ import About from "@/components/layouts/About";
 import Footer from "@/components/layouts/Footer";
 import Hero from "@/components/layouts/Hero";
 import Philosophy from "@/components/layouts/Philosophy";
-import TechStack from "@/components/layouts/TechStack";
 import WhatIDo from "@/components/layouts/WhatIDo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { LanguageSwitch } from "@/components/layouts/LanguageSwitch";
@@ -30,7 +29,6 @@ export default function Home() {
         <Hero />
         <About />
         <WhatIDo />
-        <TechStack />
         <Philosophy />
       </Box>
       <Footer />

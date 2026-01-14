@@ -1,9 +1,22 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/elements/card";
-import { Box, Grid, Heading, Text } from "@chakra-ui/react";
+import { Card, CardHeader, CardTitle } from "@/components/elements/card";
+import { Badge } from "@/components/elements/badge";
+import { Box, Grid, Heading, Text, Flex } from "@chakra-ui/react";
 import { TbDeviceMobile, TbServer, TbSparkles, TbRocket } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
 const icons = [TbDeviceMobile, TbServer, TbSparkles, TbRocket];
+
+// Map technologies to each service
+const serviceTech = [
+  // Web/Mobile App Development
+  ["React", "Next.js", "Vite", "React Native", "Expo", "Swift", "Kotlin"],
+  // Backend/Infra
+  ["Node.js", "NestJS", "GraphQL", "REST API", "AWS", "GCP", "Terraform"],
+  // Generative AI Integration
+  ["TypeScript", "Python", "OpenAI", "Anthropic", "LangChain"],
+  // MVP Prototyping
+  ["TypeScript", "React", "Node.js", "AWS", "Vite"]
+];
 
 export default function WhatIDo() {
   const { t } = useTranslation();
@@ -25,15 +38,16 @@ export default function WhatIDo() {
           mb={16}
           className="scroll-animate"
         >
-          {t('works.title')}
+          Expertise
         </Heading>
 
         <Grid
-          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
+          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
           gap={6}
         >
           {items.map((item, index) => {
             const Icon = icons[index];
+            const tech = serviceTech[index];
             return (
               <Box
                 key={index}
@@ -69,13 +83,22 @@ export default function WhatIDo() {
                         className="group-hover:opacity-100"
                       />
                     </Box>
-                    <CardTitle className="text-xl font-bold">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <Text color="fg.muted" lineHeight="relaxed">
+                    <CardTitle className="text-xl font-bold mb-4">{item.title}</CardTitle>
+                    <Text color="fg.muted" lineHeight="relaxed" mb={4}>
                       {item.description}
                     </Text>
-                  </CardContent>
+                    <Flex flexWrap="wrap" gap={2} mt={4}>
+                      {tech.map((t, i) => (
+                        <Badge
+                          key={i}
+                          variant="secondary"
+                          className="px-3 py-1 text-xs font-mono font-normal bg-secondary hover:bg-secondary/80 text-foreground rounded-md"
+                        >
+                          {t}
+                        </Badge>
+                      ))}
+                    </Flex>
+                  </CardHeader>
                 </Card>
               </Box>
             );
