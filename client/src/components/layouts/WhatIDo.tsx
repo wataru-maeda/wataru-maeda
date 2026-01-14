@@ -13,9 +13,9 @@ const serviceTech = [
   // Backend/Infra
   ["Node.js", "NestJS", "GraphQL", "REST API", "AWS", "GCP", "Terraform"],
   // Generative AI Integration
-  ["TypeScript", "Python", "OpenAI", "Anthropic", "LangChain"],
-  // MVP Prototyping
-  ["TypeScript", "React", "Node.js", "AWS", "Vite"]
+  ["OpenAI", "Anthropic", "LangChain", "Ollama", "AWS", "GCP"],
+  // Automation Support
+  ["n8n", "GitHub Actions", "Terraform", "AWS", "GCP"]
 ];
 
 export default function WhatIDo() {
