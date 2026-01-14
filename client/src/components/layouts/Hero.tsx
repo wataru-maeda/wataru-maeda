@@ -1,4 +1,5 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Button } from "@/components/elements/button";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {
@@ -17,29 +18,15 @@ export default function Hero() {
       position="relative"
       overflow="hidden"
     >
-      {/* Grid Background (Subtle) */}
-      <Box
-        position="absolute"
-        inset={0}
-        zIndex={0}
-        pointerEvents="none"
-        opacity={0.03}
-        style={{
-          backgroundImage:
-            "linear-gradient(#0a0a0a 1px, transparent 1px), linear-gradient(90deg, #0a0a0a 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      />
-
       <Box zIndex={10} maxW="7xl" w="full" mx="auto">
         <Box
-          mb={8}
+          mb={6}
           className="animate-fade-in-up"
           style={{ animationDelay: "0.1s" }}
         >
           <Text
             fontFamily="mono"
-            fontSize={{ base: "sm", md: "base" }}
+            fontSize={{ base: "xs", md: "sm" }}
             letterSpacing="wider"
             color="fg.muted"
             textTransform="uppercase"
@@ -52,17 +39,55 @@ export default function Hero() {
           as="h1"
           fontFamily="sans"
           fontWeight="black"
-          fontSize="10vw"
+          fontSize={{ base: "7xl", md: "8xl", lg: "9xl" }}
           lineHeight={0.9}
           letterSpacing="tighter"
           color="fg"
+          mb={8}
           className="animate-fade-in-up"
           style={{ animationDelay: "0.2s" }}
         >
           WATARU
           <br />
-          MAEDA
+          <Box as="span" color="#3b82f6">
+            MAEDA
+          </Box>
         </Heading>
+
+        <Flex
+          gap={4}
+          className="animate-fade-in-up"
+          style={{ animationDelay: "0.3s" }}
+          flexWrap="wrap"
+        >
+          <a href="mailto:contact@watarumaeda.com">
+            <Button
+              size="lg"
+              px={8}
+              py={6}
+              fontSize="md"
+              fontWeight="medium"
+              colorPalette="blue"
+              borderRadius="full"
+            >
+              {t("hero.buttons.contact")}
+            </Button>
+          </a>
+          <a href="#expertise">
+            <Button
+              variant="outline"
+              size="lg"
+              px={8}
+              py={6}
+              fontSize="md"
+              fontWeight="medium"
+              borderRadius="full"
+              borderWidth={2}
+            >
+              {t("hero.buttons.projects")}
+            </Button>
+          </a>
+        </Flex>
       </Box>
     </Box>
   );

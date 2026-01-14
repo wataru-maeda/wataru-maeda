@@ -6,15 +6,10 @@ import { useTranslation } from "react-i18next";
 
 const icons = [TbDeviceMobile, TbServer, TbSparkles, TbRocket];
 
-// Map technologies to each service
 const serviceTech = [
-  // Web/Mobile App Development
   ["React", "Next.js", "Vite", "React Native", "Expo", "Swift", "Kotlin"],
-  // Backend/Infra
   ["Node.js", "NestJS", "GraphQL", "REST API", "AWS", "GCP", "Terraform"],
-  // Generative AI Integration
   ["OpenAI", "Anthropic", "LangChain", "Ollama", "AWS", "GCP"],
-  // Automation Support
   ["n8n", "GitHub Actions", "Terraform", "AWS", "GCP"],
 ];
 
@@ -30,7 +25,7 @@ export default function WhatIDo() {
       as="section"
       py={24}
       px={{ base: 6, md: 12, lg: 24 }}
-      bg="rgba(241, 245, 249, 0.8)"
+      id="expertise"
     >
       <Box maxW="7xl" mx="auto">
         <Heading
@@ -38,56 +33,51 @@ export default function WhatIDo() {
           fontSize={{ base: "4xl", md: "6xl" }}
           fontWeight="bold"
           letterSpacing="tight"
-          mb={16}
+          mb={12}
           className="scroll-animate"
         >
           Expertise
         </Heading>
 
-        <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={6}>
+        <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={4}>
           {items.map((item, index) => {
             const Icon = icons[index];
             const tech = serviceTech[index];
             return (
               <Box
                 key={index}
-                className="scroll-animate group"
+                className="scroll-animate"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                h="full"
               >
                 <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-background h-full">
                   <CardHeader className="pb-4">
-                    <Box
-                      w={16}
-                      h={16}
-                      mb={6}
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                      bg="#000000"
-                      borderRadius="xl"
-                      transition="all 0.3s"
-                      css={{
-                        ".group:hover &": {
-                          backgroundColor: "#3b82f6",
-                        },
-                        "& svg": {
-                          transition: "all 0.3s",
-                          color: "#FFFFFF",
-                        },
-                      }}
-                    >
-                      <Icon size={40} />
-                    </Box>
-                    <CardTitle className="text-xl font-bold mb-4">
-                      {item.title}
-                    </CardTitle>
-                    <Text color="fg.muted" lineHeight="relaxed" mb={4}>
+                    <Flex alignItems="center" gap={4} mb={4}>
+                      <Box
+                        w={14}
+                        h={14}
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        bg="rgba(59, 130, 246, 0.1)"
+                        borderRadius="lg"
+                        flexShrink={0}
+                      >
+                        <Icon size={28} color="#3b82f6" />
+                      </Box>
+                      <CardTitle className="text-xl font-bold">
+                        {item.title}
+                      </CardTitle>
+                    </Flex>
+                    <Text color="fg.muted" lineHeight="relaxed" mb={4} fontSize="sm">
                       {item.description}
                     </Text>
-                    <Flex flexWrap="wrap" gap={2} mt={4}>
+                    <Flex flexWrap="wrap" gap={2}>
                       {tech.map((t, i) => (
-                        <Badge key={i} variant="secondary">
+                        <Badge
+                          key={i}
+                          variant="secondary"
+                          className="px-3 py-1 text-xs font-mono font-normal bg-secondary text-foreground rounded-md"
+                        >
                           {t}
                         </Badge>
                       ))}

@@ -30,21 +30,20 @@ export default function Footer() {
       as="footer"
       py={24}
       px={{ base: 6, md: 12, lg: 24 }}
-      bg="rgba(241, 245, 249, 0.3)"
     >
       <Box maxW="7xl" mx="auto">
-        <Box mb={24} className="scroll-animate">
+        <Box mb={12} className="scroll-animate">
           <Heading
             as="h2"
             fontSize={{ base: "4xl", md: "6xl" }}
             fontWeight="bold"
-            letterSpacing="tighter"
-            mb={12}
+            letterSpacing="tight"
+            mb={8}
           >
             {t('contact.title')}
           </Heading>
 
-          <Flex gap={6} flexWrap="wrap">
+          <Flex gap={4} flexWrap="wrap">
             {socialLinks.map((link, index) => {
               const Icon = link.icon;
               return (
@@ -53,28 +52,30 @@ export default function Footer() {
                   href={link.href}
                   target={link.external ? "_blank" : undefined}
                   rel={link.external ? "noopener noreferrer" : undefined}
-                  className="group"
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
-                  w={16}
-                  h={16}
-                  bg="#000000"
-                  borderRadius="xl"
+                  w={14}
+                  h={14}
+                  bg="rgba(59, 130, 246, 0.1)"
+                  borderRadius="lg"
                   transition="all 0.3s"
                   css={{
                     '&:hover': {
                       backgroundColor: '#3b82f6',
-                      transform: 'translateY(-4px)'
+                      transform: 'translateY(-2px)'
                     },
                     '& svg': {
-                      transition: 'all 0.3s',
+                      transition: 'color 0.3s',
+                      color: '#3b82f6'
+                    },
+                    '&:hover svg': {
                       color: '#FFFFFF'
                     }
                   }}
                   aria-label={link.label}
                 >
-                  <Icon size={32} />
+                  <Icon size={28} />
                 </ChakraLink>
               );
             })}

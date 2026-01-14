@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, Text, Card } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 export default function Philosophy() {
@@ -10,8 +10,6 @@ export default function Philosophy() {
       as="section"
       py={24}
       px={{ base: 6, md: 12, lg: 24 }}
-      bg="fg"
-      color="bg"
     >
       <Box maxW="7xl" mx="auto">
         <Heading
@@ -19,81 +17,56 @@ export default function Philosophy() {
           fontSize={{ base: "4xl", md: "6xl" }}
           fontWeight="bold"
           letterSpacing="tight"
-          mb={24}
-          color="bg"
+          mb={12}
           className="scroll-animate"
         >
           {t('philosophy.title')}
         </Heading>
 
-        <VStack gap={0} align="stretch">
+        <Grid
+          templateColumns={{ base: "1fr", sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
+          gap={4}
+        >
           {items.map((item, index) => (
-            <Grid
+            <GridItem
               key={index}
-              className="group scroll-animate"
-              templateColumns={{ base: "1fr", md: "repeat(12, 1fr)" }}
-              gap={8}
-              py={12}
-              borderTop="1px solid"
-              borderColor="rgba(255, 255, 255, 0.2)"
-              transition="background-color 0.5s"
-              css={{
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.05)'
-                }
-              }}
+              className="scroll-animate"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <GridItem colSpan={{ base: 1, md: 2 }}>
-                <Text
-                  fontSize={{ base: "4xl", md: "5xl" }}
-                  fontFamily="mono"
-                  fontWeight="light"
-                  color="rgba(255, 255, 255, 0.4)"
-                  transition="color 0.3s"
-                  css={{
-                    '.group:hover &': {
-                      color: 'var(--primary)'
-                    }
-                  }}
-                >
-                  {String(index + 1).padStart(2, '0')}
-                </Text>
-              </GridItem>
-              <GridItem colSpan={{ base: 1, md: 10 }}>
+              <Card.Root
+                bg="bg"
+                borderRadius="xl"
+                p={6}
+                boxShadow="sm"
+                transition="all 0.3s"
+                h="full"
+                css={{
+                  '&:hover': {
+                    boxShadow: 'md',
+                    transform: 'translateY(-2px)'
+                  }
+                }}
+              >
                 <Heading
                   as="h3"
-                  fontSize={{ base: "2xl", md: "3xl" }}
+                  fontSize="lg"
                   fontWeight="bold"
-                  mb={4}
-                  color="bg"
-                  transition="transform 0.3s"
-                  css={{
-                    '.group:hover &': {
-                      transform: 'translateX(0.5rem)'
-                    }
-                  }}
+                  mb={3}
+                  color="fg"
                 >
                   {item.title}
                 </Heading>
                 <Text
-                  fontSize="lg"
-                  color="rgba(255, 255, 255, 0.7)"
-                  maxW="2xl"
-                  transition="color 0.3s"
-                  css={{
-                    '.group:hover &': {
-                      color: 'rgba(255, 255, 255, 0.9)'
-                    }
-                  }}
+                  fontSize="sm"
+                  lineHeight="relaxed"
+                  color="fg.muted"
                 >
                   {item.description}
                 </Text>
-              </GridItem>
-            </Grid>
+              </Card.Root>
+            </GridItem>
           ))}
-          <Box borderTop="1px solid" borderColor="rgba(255, 255, 255, 0.2)" />
-        </VStack>
+        </Grid>
       </Box>
     </Box>
   );
