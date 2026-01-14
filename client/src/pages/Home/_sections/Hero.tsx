@@ -7,7 +7,6 @@ import {
 } from "@chakra-ui/react";
 import { TbBrandGithub, TbBrandLinkedin, TbMail } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
-import { HoverCard } from "@/components/ui";
 
 const socialLinks = [
   { icon: TbMail, href: "mailto:contact@watarumaeda.com", label: "Email" },
@@ -28,7 +27,39 @@ const socialLinks = [
 export default function HeroSection() {
   const { t } = useTranslation();
   return (
-    <HoverCard p={8} h="full" enableHover={false}>
+    <Box
+      bg="dark.card"
+      borderRadius="2xl"
+      borderWidth="1px"
+      borderColor="dark.cardBorder"
+      p={8}
+      h="full"
+      position="relative"
+      overflow="hidden"
+      transition="all 0.4s cubic-bezier(0.4, 0, 0.2, 1)"
+      _hover={{
+        borderColor: "primary.500",
+        transform: "scale(1.02)",
+        boxShadow:
+          "0 20px 60px rgba(59, 130, 246, 0.3), 0 0 80px rgba(59, 130, 246, 0.15), inset 0 0 100px rgba(59, 130, 246, 0.05)",
+      }}
+      css={{
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: "-100%",
+          width: "100%",
+          height: "100%",
+          background:
+            "linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent)",
+          transition: "left 0.6s ease",
+        },
+        "&:hover::before": {
+          left: "100%",
+        },
+      }}
+    >
       <Text
         fontFamily="mono"
         fontSize="xs"
@@ -80,9 +111,10 @@ export default function HeroSection() {
               _hover={{
                 bg: "primary.500",
                 color: "dark.textPrimary",
-                transform: "translateY(-2px)",
+                transform: "translateY(-2px) scale(1.1)",
+                boxShadow: "0 8px 20px rgba(59, 130, 246, 0.4)",
               }}
-              transition="all 0.3s"
+              transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
               aria-label={link.label}
             >
               <Icon size={24} />
@@ -90,6 +122,6 @@ export default function HeroSection() {
           );
         })}
       </Flex>
-    </HoverCard>
+    </Box>
   );
 }
