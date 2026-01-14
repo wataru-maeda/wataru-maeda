@@ -10,8 +10,7 @@ Full-stack engineer passionate about building products that people love. I've sp
 
 ### What I Work With
 
-|                    |                                                   |                                                   |                                                        |                                                    |                                                        |                                                  |
-| ------------------ | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------ |
-| **Frontend**       | ![React](https://skillicons.dev/icons?i=react)    | ![Next.js](https://skillicons.dev/icons?i=nextjs) | ![Vite](https://skillicons.dev/icons?i=vite)           | ![TypeScript](https://skillicons.dev/icons?i=ts)   | ![Swift](https://skillicons.dev/icons?i=swift)         | ![Kotlin](https://skillicons.dev/icons?i=kotlin) |
-| **Backend**        | ![Node.js](https://skillicons.dev/icons?i=nodejs) | ![NestJS](https://skillicons.dev/icons?i=nestjs)  | ![GraphQL](https://skillicons.dev/icons?i=graphql)     | ![MongoDB](https://skillicons.dev/icons?i=mongodb) | ![PostgreSQL](https://skillicons.dev/icons?i=postgres) |                                                  |
-| **Infrastructure** | ![AWS](https://skillicons.dev/icons?i=aws)        | ![GCP](https://skillicons.dev/icons?i=gcp)        | ![Terraform](https://skillicons.dev/icons?i=terraform) | ![Docker](https://skillicons.dev/icons?i=docker)   |                                                        |                                                  |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| **Frontend** | ![Frontend](https://skillicons.dev/icons?i=react,nextjs,vite,ts,swift,kotlin) |
+| **Backend** | ![Backend](https://skillicons.dev/icons?i=nodejs,nestjs,graphql,mongodb,postgres) |
+| **Infrastructure** | ![Infrastructure](https://skillicons.dev/icons?i=aws,gcp,terraform,docker) |
