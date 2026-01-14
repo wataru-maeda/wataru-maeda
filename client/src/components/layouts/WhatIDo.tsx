@@ -70,18 +70,17 @@ export default function WhatIDo() {
                       css={{
                         '.group:hover &': {
                           backgroundColor: 'rgba(37, 99, 235, 0.1)'
+                        },
+                        '& svg': {
+                          transition: 'all 0.3s',
+                          color: '#000000'
+                        },
+                        '.group:hover & svg': {
+                          color: '#3b82f6'
                         }
                       }}
                     >
-                      <Icon
-                        size={40}
-                        style={{
-                          opacity: 0.8,
-                          transition: 'all 0.3s',
-                          color: '#3b82f6'
-                        }}
-                        className="group-hover:opacity-100"
-                      />
+                      <Icon size={40} />
                     </Box>
                     <CardTitle className="text-xl font-bold mb-4">{item.title}</CardTitle>
                     <Text color="fg.muted" lineHeight="relaxed" mb={4}>
