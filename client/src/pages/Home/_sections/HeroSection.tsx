@@ -76,20 +76,13 @@ export default function HeroSection() {
               h={12}
               bg="rgba(59, 130, 246, 0.1)"
               borderRadius="xl"
-              transition="all 0.3s"
-              css={{
-                "&:hover": {
-                  backgroundColor: "#3b82f6",
-                  transform: "translateY(-2px)",
-                },
-                "& svg": {
-                  transition: "color 0.3s",
-                  color: "#3b82f6",
-                },
-                "&:hover svg": {
-                  color: "#FFFFFF",
-                },
+              color="primary.500"
+              _hover={{
+                bg: "primary.500",
+                color: "dark.textPrimary",
+                transform: "translateY(-2px)",
               }}
+              transition="all 0.3s"
               aria-label={link.label}
             >
               <Icon size={24} />

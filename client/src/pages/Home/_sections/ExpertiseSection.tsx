@@ -7,7 +7,6 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import { Badge } from "@/components/elements/badge";
 import { TbDeviceMobile, TbServer, TbSparkles, TbRocket } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
@@ -60,8 +59,9 @@ export default function ExpertiseSection() {
                   bg="rgba(59, 130, 246, 0.1)"
                   borderRadius="xl"
                   flexShrink={0}
+                  color="primary.500"
                 >
-                  <Icon size={24} color="primary.500" />
+                  <Icon size={24} />
                 </Box>
                 <Heading
                   as="h3"

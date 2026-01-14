@@ -35,8 +35,9 @@ export default function StatsSection() {
                 bg="rgba(59, 130, 246, 0.1)"
                 borderRadius="xl"
                 flexShrink={0}
+                color="primary.500"
               >
-                <Icon size={24} color="primary.500" />
+                <Icon size={24} />
               </Box>
               <Box>
                 <Text
