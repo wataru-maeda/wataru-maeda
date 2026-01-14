@@ -23,7 +23,7 @@ export default function About() {
         <Box mb={16} className="scroll-animate">
           <Heading
             as="h2"
-            fontSize={{ base: "3xl", md: "4xl" }}
+            fontSize={{ base: "4xl", md: "6xl" }}
             fontWeight="bold"
             letterSpacing="tight"
             mb={6}

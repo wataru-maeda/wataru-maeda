@@ -16,7 +16,7 @@ export default function Philosophy() {
       <Box maxW="7xl" mx="auto">
         <Heading
           as="h2"
-          fontSize={{ base: "3xl", md: "4xl" }}
+          fontSize={{ base: "4xl", md: "6xl" }}
           fontWeight="bold"
           letterSpacing="tight"
           mb={24}
