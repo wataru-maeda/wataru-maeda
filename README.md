@@ -2,13 +2,7 @@
 
 Welcome! I'm a full-stack engineer who genuinely loves building products that make people's lives easier. Over the past decade+, I've been lucky enough to work on all sorts of projects—from mobile apps that fit in your pocket to cloud infrastructure that powers businesses behind the scenes.
 
-What drives me? Creating experiences that just *work* and feel great to use. I believe the best technology is the kind you don't have to think about—it simply does what you need it to do.
-
-<div align="center">
-
-💼 [LinkedIn](https://www.linkedin.com/in/wtr0716/) | 🌐 [Portfolio](https://watarumaeda.com/) | 📧 w.maeda.ca@gmail.com
-
-</div>
+What drives me? Creating experiences that just _work_ and feel great to use. I believe the best technology is the kind you don't have to think about—it simply does what you need it to do.
 
 ---
 
@@ -23,3 +17,9 @@ Whether it's building sleek frontends, robust backends, or scalable cloud system
 ### 💬 Let's Connect!
 
 Always happy to chat about interesting projects, share ideas, or collaborate on something cool. Feel free to reach out!
+
+<div align="center">
+
+💼 [LinkedIn](https://www.linkedin.com/in/wtr0716/) | 🌐 [Portfolio](https://watarumaeda.com/) | 📧 w.maeda.ca@gmail.com
+
+</div>
