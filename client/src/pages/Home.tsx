@@ -1,7 +1,28 @@
-import { Box, Grid, GridItem, Card, Heading, Text, Flex, Link as ChakraLink } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  GridItem,
+  Card,
+  Heading,
+  Text,
+  Flex,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import { Button } from "@/components/elements/button";
 import { Badge } from "@/components/elements/badge";
-import { TbUsers, TbBriefcase, TbStack, TbDeviceMobile, TbServer, TbSparkles, TbRocket, TbBrandGithub, TbBrandLinkedin, TbMail, TbCode } from "react-icons/tb";
+import {
+  TbUsers,
+  TbBriefcase,
+  TbStack,
+  TbDeviceMobile,
+  TbServer,
+  TbSparkles,
+  TbRocket,
+  TbBrandGithub,
+  TbBrandLinkedin,
+  TbMail,
+  TbCode,
+} from "react-icons/tb";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { LanguageSwitch } from "@/components/layouts/LanguageSwitch";
 import { useTranslation } from "react-i18next";
@@ -20,14 +41,32 @@ export default function Home() {
   useScrollAnimation();
   const { t } = useTranslation();
 
-  const stats = t('about.stats', { returnObjects: true }) as Array<{ value: string; label: string }>;
-  const expertiseItems = t('works.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const philosophyItems = t('philosophy.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const stats = t("about.stats", { returnObjects: true }) as Array<{
+    value: string;
+    label: string;
+  }>;
+  const expertiseItems = t("works.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+  const philosophyItems = t("philosophy.items", {
+    returnObjects: true,
+  }) as Array<{ title: string; description: string }>;
 
   const socialLinks = [
     { icon: TbMail, href: "mailto:contact@watarumaeda.com", label: "Email" },
-    { icon: TbBrandGithub, href: "https://github.com/wataru-maeda", label: "GitHub", external: true },
-    { icon: TbBrandLinkedin, href: "https://www.linkedin.com/in/wataru-maeda", label: "LinkedIn", external: true },
+    {
+      icon: TbBrandGithub,
+      href: "https://github.com/wataru-maeda",
+      label: "GitHub",
+      external: true,
+    },
+    {
+      icon: TbBrandLinkedin,
+      href: "https://www.linkedin.com/in/wataru-maeda",
+      label: "LinkedIn",
+      external: true,
+    },
   ];
 
   return (
@@ -39,21 +78,17 @@ export default function Home() {
       px={{ base: 4, md: 6, lg: 8 }}
       py={8}
       css={{
-        '::selection': {
-          backgroundColor: 'var(--primary)',
-          color: 'white'
-        }
+        "::selection": {
+          backgroundColor: "var(--primary)",
+          color: "white",
+        },
       }}
     >
       <LanguageSwitch />
 
       <Box maxW="1400px" mx="auto">
         {/* Hero + Stats Bento Grid */}
-        <Grid
-          templateColumns={{ base: "1fr", lg: "2fr 1fr" }}
-          gap={4}
-          mb={4}
-        >
+        <Grid templateColumns={{ base: "1fr", lg: "2fr 1fr" }} gap={4} mb={4}>
           {/* Hero Card */}
           <GridItem>
             <Card.Root bg="bg" borderRadius="2xl" p={8} boxShadow="sm" h="full">
@@ -84,17 +119,28 @@ export default function Home() {
               </Heading>
 
               <Text fontSize="lg" color="fg.muted" mb={6} maxW="xl">
-                {t('about.description')}
+                {t("about.description")}
               </Text>
 
               <Flex gap={3} flexWrap="wrap">
                 <a href="mailto:contact@watarumaeda.com">
-                  <Button size="md" px={6} colorPalette="blue" borderRadius="full">
+                  <Button
+                    size="md"
+                    px={6}
+                    colorPalette="blue"
+                    borderRadius="full"
+                  >
                     {t("hero.buttons.contact")}
                   </Button>
                 </a>
                 <a href="#expertise">
-                  <Button variant="outline" size="md" px={6} borderRadius="full" borderWidth={2}>
+                  <Button
+                    variant="outline"
+                    size="md"
+                    px={6}
+                    borderRadius="full"
+                    borderWidth={2}
+                  >
                     {t("hero.buttons.projects")}
                   </Button>
                 </a>
@@ -108,7 +154,14 @@ export default function Home() {
               {stats.map((stat, index) => {
                 const Icon = statIcons[index];
                 return (
-                  <Card.Root key={index} bg="bg" borderRadius="2xl" p={6} boxShadow="sm" flex={1}>
+                  <Card.Root
+                    key={index}
+                    bg="bg"
+                    borderRadius="2xl"
+                    p={6}
+                    boxShadow="sm"
+                    flex={1}
+                  >
                     <Flex alignItems="center" gap={4}>
                       <Box
                         w={12}
@@ -123,10 +176,20 @@ export default function Home() {
                         <Icon size={24} color="#3b82f6" />
                       </Box>
                       <Box>
-                        <Text fontSize="3xl" fontWeight="bold" lineHeight="1" mb={1}>
+                        <Text
+                          fontSize="3xl"
+                          fontWeight="bold"
+                          lineHeight="1"
+                          mb={1}
+                        >
                           {stat.value}
                         </Text>
-                        <Text fontSize="xs" color="fg.muted" textTransform="uppercase" letterSpacing="wide">
+                        <Text
+                          fontSize="xs"
+                          color="fg.muted"
+                          textTransform="uppercase"
+                          letterSpacing="wide"
+                        >
                           {stat.label}
                         </Text>
                       </Box>
@@ -140,7 +203,11 @@ export default function Home() {
 
         {/* Expertise + Philosophy Bento Grid */}
         <Grid
-          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
+          templateColumns={{
+            base: "1fr",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
           gap={4}
           mb={4}
         >
@@ -149,8 +216,17 @@ export default function Home() {
             const Icon = expertiseIcons[index];
             const tech = serviceTech[index];
             return (
-              <GridItem key={index} colSpan={{ base: 1, lg: index % 3 === 0 ? 2 : 1 }}>
-                <Card.Root bg="bg" borderRadius="2xl" p={6} boxShadow="sm" h="full">
+              <GridItem
+                key={index}
+                colSpan={{ base: 1, lg: index % 3 === 0 ? 2 : 1 }}
+              >
+                <Card.Root
+                  bg="bg"
+                  borderRadius="2xl"
+                  p={6}
+                  boxShadow="sm"
+                  h="full"
+                >
                   <Flex alignItems="center" gap={3} mb={4}>
                     <Box
                       w={12}
@@ -168,12 +244,21 @@ export default function Home() {
                       {item.title}
                     </Heading>
                   </Flex>
-                  <Text fontSize="sm" color="fg.muted" mb={4} lineHeight="relaxed">
+                  <Text
+                    fontSize="sm"
+                    color="fg.muted"
+                    mb={4}
+                    lineHeight="relaxed"
+                  >
                     {item.description}
                   </Text>
                   <Flex flexWrap="wrap" gap={2}>
                     {tech.map((t, i) => (
-                      <Badge key={i} variant="secondary" className="px-2 py-1 text-xs font-mono rounded-md">
+                      <Badge
+                        key={i}
+                        variant="secondary"
+                        className="px-2 py-1 text-xs font-mono rounded-md"
+                      >
                         {t}
                       </Badge>
                     ))}
@@ -186,7 +271,13 @@ export default function Home() {
           {/* Philosophy Cards */}
           {philosophyItems.slice(0, 2).map((item, index) => (
             <GridItem key={`phil-${index}`}>
-              <Card.Root bg="bg" borderRadius="2xl" p={6} boxShadow="sm" h="full">
+              <Card.Root
+                bg="bg"
+                borderRadius="2xl"
+                p={6}
+                boxShadow="sm"
+                h="full"
+              >
                 <Flex alignItems="center" gap={3} mb={3}>
                   <Box
                     w={10}
@@ -214,13 +305,23 @@ export default function Home() {
 
         {/* Philosophy Grid */}
         <Grid
-          templateColumns={{ base: "1fr", sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
+          templateColumns={{
+            base: "1fr",
+            sm: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
           gap={4}
           mb={4}
         >
           {philosophyItems.slice(2).map((item, index) => (
             <GridItem key={`phil-rest-${index}`}>
-              <Card.Root bg="bg" borderRadius="2xl" p={6} boxShadow="sm" h="full">
+              <Card.Root
+                bg="bg"
+                borderRadius="2xl"
+                p={6}
+                boxShadow="sm"
+                h="full"
+              >
                 <Heading as="h3" fontSize="md" fontWeight="bold" mb={3}>
                   {item.title}
                 </Heading>
@@ -234,8 +335,13 @@ export default function Home() {
 
         {/* Footer */}
         <Box py={12}>
-          <Heading as="h2" fontSize={{ base: "3xl", md: "5xl" }} fontWeight="bold" mb={6}>
-            {t('contact.title')}
+          <Heading
+            as="h2"
+            fontSize={{ base: "3xl", md: "5xl" }}
+            fontWeight="bold"
+            mb={6}
+          >
+            {t("contact.title")}
           </Heading>
           <Flex gap={3} mb={8}>
             {socialLinks.map((link, index) => {
@@ -255,17 +361,17 @@ export default function Home() {
                   borderRadius="xl"
                   transition="all 0.3s"
                   css={{
-                    '&:hover': {
-                      backgroundColor: '#3b82f6',
-                      transform: 'translateY(-2px)'
+                    "&:hover": {
+                      backgroundColor: "#3b82f6",
+                      transform: "translateY(-2px)",
                     },
-                    '& svg': {
-                      transition: 'color 0.3s',
-                      color: '#3b82f6'
+                    "& svg": {
+                      transition: "color 0.3s",
+                      color: "#3b82f6",
                     },
-                    '&:hover svg': {
-                      color: '#FFFFFF'
-                    }
+                    "&:hover svg": {
+                      color: "#FFFFFF",
+                    },
                   }}
                   aria-label={link.label}
                 >
@@ -274,7 +380,14 @@ export default function Home() {
               );
             })}
           </Flex>
-          <Text fontSize="sm" color="fg.muted" textAlign="center" pt={8} borderTop="1px solid" borderColor="border">
+          <Text
+            fontSize="sm"
+            color="fg.muted"
+            textAlign="center"
+            pt={8}
+            borderTop="1px solid"
+            borderColor="border"
+          >
             © {new Date().getFullYear()} Wataru Maeda. All rights reserved.
           </Text>
         </Box>

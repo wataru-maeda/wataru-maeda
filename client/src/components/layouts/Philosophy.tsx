@@ -3,14 +3,13 @@ import { useTranslation } from "react-i18next";
 
 export default function Philosophy() {
   const { t } = useTranslation();
-  const items = t('philosophy.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const items = t("philosophy.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
 
   return (
-    <Box
-      as="section"
-      py={24}
-      px={{ base: 6, md: 12, lg: 24 }}
-    >
+    <Box as="section" py={24} px={{ base: 6, md: 12, lg: 24 }}>
       <Box maxW="7xl" mx="auto">
         <Heading
           as="h2"
@@ -20,11 +19,15 @@ export default function Philosophy() {
           mb={12}
           className="scroll-animate"
         >
-          {t('philosophy.title')}
+          {t("philosophy.title")}
         </Heading>
 
         <Grid
-          templateColumns={{ base: "1fr", sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
+          templateColumns={{
+            base: "1fr",
+            sm: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
           gap={4}
         >
           {items.map((item, index) => (
@@ -41,10 +44,10 @@ export default function Philosophy() {
                 transition="all 0.3s"
                 h="full"
                 css={{
-                  '&:hover': {
-                    boxShadow: 'md',
-                    transform: 'translateY(-2px)'
-                  }
+                  "&:hover": {
+                    boxShadow: "md",
+                    transform: "translateY(-2px)",
+                  },
                 }}
               >
                 <Heading
@@ -56,11 +59,7 @@ export default function Philosophy() {
                 >
                   {item.title}
                 </Heading>
-                <Text
-                  fontSize="sm"
-                  lineHeight="relaxed"
-                  color="fg.muted"
-                >
+                <Text fontSize="sm" lineHeight="relaxed" color="fg.muted">
                   {item.description}
                 </Text>
               </Card.Root>
