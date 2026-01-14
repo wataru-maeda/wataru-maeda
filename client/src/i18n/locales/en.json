@@ -42,11 +42,11 @@
     "items": [
       {
         "title": "Web/Mobile App Development",
-        "description": "Building cross-platform applications with modern frameworks like React, React Native, and Next.js."
+        "description": "Designing and developing cross-platform applications with a focus on user experience and performance."
       },
       {
         "title": "Backend/Infra",
-        "description": "Designing robust backend systems and cloud infrastructure using Node.js, Go, AWS, and GCP."
+        "description": "Building scalable and reliable backend systems with robust cloud infrastructure architecture."
       },
       {
         "title": "Generative AI Integration",
@@ -54,7 +54,7 @@
       },
       {
         "title": "Automation Support",
-        "description": "Streamlining business processes with n8n, GitHub Actions, and Terraform to boost efficiency and productivity."
+        "description": "Streamlining business processes through workflow automation and infrastructure as code."
       }
     ]
   },

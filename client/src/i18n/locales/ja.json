@@ -42,11 +42,11 @@
     "items": [
       {
         "title": "Web/モバイルアプリ開発",
-        "description": "React, React Native, Next.jsなどのモダンフレームワークを使用したクロスプラットフォーム開発。"
+        "description": "ユーザー体験を重視したクロスプラットフォームアプリケーションの設計・開発。"
       },
       {
         "title": "バックエンド/インフラ構築",
-        "description": "Node.js, Go, AWS, GCPを使用した堅牢なバックエンドシステムとクラウドインフラの設計・構築。"
+        "description": "スケーラブルで信頼性の高いバックエンドシステムとクラウドインフラの設計・構築。"
       },
       {
         "title": "生成AI導入支援",
@@ -54,7 +54,7 @@
       },
       {
         "title": "自動化支援",
-        "description": "n8n、GitHub Actions、Terraformを活用し、業務プロセスの効率化と自動化を実現します。"
+        "description": "ワークフローの自動化とインフラのコード化により、業務プロセスの効率化を実現。"
       }
     ]
   },
