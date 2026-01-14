@@ -1,4 +1,4 @@
-import { Box, Card, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { TbUsers, TbBriefcase, TbStack } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
@@ -16,14 +16,24 @@ export default function StatsSection() {
       {stats.map((stat, index) => {
         const Icon = statIcons[index];
         return (
-          <Card.Root
+          <Box
             key={index}
-            bg="dark.card"
-            borderRadius="2xl"
-            p={6}
             flex={1}
+            borderRadius="2xl"
             borderWidth="1px"
             borderColor="dark.cardBorder"
+            bg="dark.card"
+            p={6}
+            transition="all 0.3s ease"
+            cursor="pointer"
+            _hover={{
+              borderColor: "primary.500",
+              transform: "translateY(-4px)",
+              boxShadow:
+                "0 8px 30px rgba(59, 130, 246, 0.2), 0 0 40px rgba(59, 130, 246, 0.2)",
+              background:
+                "linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.05) 80%, #0a0a0a 100%)",
+            }}
           >
             <Flex alignItems="center" gap={4}>
               <Box
@@ -59,7 +69,7 @@ export default function StatsSection() {
                 </Text>
               </Box>
             </Flex>
-          </Card.Root>
+          </Box>
         );
       })}
     </Flex>
